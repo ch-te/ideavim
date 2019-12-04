@@ -33,6 +33,9 @@ set showcmd
 " this plugin makes the "%" command jump tomatching HTML tags, if/else/endif
 packadd! matchit
 
+" Share the Systemclipboard
+set clipboard=unnamedplus
+
 " ### ideavim ###
 set surround
 " Commands: ys, cs, ds, S
