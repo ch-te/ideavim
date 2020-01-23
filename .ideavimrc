@@ -1,37 +1,13 @@
-"let mapleader = " "
-syntax on
-filetype plugin indent on
-set encoding=utf-8
+let mapleader = " "
 
-syntax enable
-"set background=dark
-"colorscheme solarized
-
-set laststatus=2
-set noshowmode
+"set noshowmode
 
 "Search
 set ignorecase
 set hlsearch
 set incsearch "Display the match for a search pattern when halfway typing it.
 
-set nomodeline "for Security. Otherwise the first x Lines, would be interpreted by VIM as possible commands
-
-" Tabs to Space and length 2
-set tabstop=2
-set shiftwidth=2
-set shiftround
-set expandtab
-
-" Display extra whitespace
-" set list listchars=tab:»·,trail:·,nbsp:·
-
 set number relativenumber "nu rnu
-set showcmd
-
-
-" this plugin makes the "%" command jump tomatching HTML tags, if/else/endif
-packadd! matchit
 
 " Share the Systemclipboard
 set clipboard=unnamedplus
@@ -41,8 +17,30 @@ set surround
 " Commands: ys, cs, ds, S
 
 set multiple-cursors
-" Commands: <A-n>, <A-x>, <A-p>, g<A-n>
-
+  " Commands: <A-n>, <A-x>, <A-p>, g<A-n>
 set commentary
-"Commands: gcc, gc + motion, v_gc
+  "Commands: gcc, gc + motion, v_gc
+set easymotion
+map <Leader> <Plug>(easymotion-prefix)
+  " activates, that only one <Leader> is needed
+map <Leader>w <Plug>(easymotion-bd-w)
+map <Leader>W <Plug>(easymotion-bd-W)
+map <Leader>j :action MethodDown<CR>
+map <Leader>k :action MethodUp<CR>
+map <Leader>va :action EditorSelectWord<CR>
+map <Leader>fs :action FileStructurePopup<CR>
+  " todo addition: Clear clipboard + yank current selection , then this script + paste"
+map <Leader>sr :%s///gcI<left><left><left><left><left>
+map <Leader>re :action RenameElement<CR>
+map <Leader>ne :action GotoNextError<CR>
+map <Leader>pe :action GotoPreviousError<CR>
+map <Leader>mk :action MoveStatementUp<CR>
+map <Leader>mj :action MoveStatementDown<CR>
 
+" TODO not working.."
+map <Leader>nd :action NextDiff<CR>
+map <Leader>pd :action PreviousDiff<CR>
+
+" Todo open Actions:"
+  " maybe not with vim.. but with C-S-..."
+" Maybe: toggle breakpoint, Commit, push, fetch, Type-Hierachie, Super Method
