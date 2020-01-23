@@ -14,20 +14,23 @@ set clipboard=unnamedplus
 
 " ### ideavim ###
 set surround
-" Commands: ys, cs, ds, S
+" Commands: ys, cs, ds, S(For visual mode)
 
 set multiple-cursors
   " Commands: <A-n>, <A-x>, <A-p>, g<A-n>
+
 set commentary
   "Commands: gcc, gc + motion, v_gc
+
 set easymotion
 map <Leader> <Plug>(easymotion-prefix)
-  " activates, that only one <Leader> is needed
+  " activates, that only one <Leader>, instead of <Leader><Leader>, is needed
 map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>W <Plug>(easymotion-bd-W)
 map <Leader>j :action MethodDown<CR>
 map <Leader>k :action MethodUp<CR>
-map <Leader>va :action EditorSelectWord<CR>
+map af :action EditorSelectWord<CR>
+  " to make it behave like VS Code
 map <Leader>fs :action FileStructurePopup<CR>
   " todo addition: Clear clipboard + yank current selection , then this script + paste"
 map <Leader>sr :%s///gcI<left><left><left><left><left>
@@ -36,6 +39,10 @@ map <Leader>ne :action GotoNextError<CR>
 map <Leader>pe :action GotoPreviousError<CR>
 map <Leader>mk :action MoveStatementUp<CR>
 map <Leader>mj :action MoveStatementDown<CR>
+map gb :action SelectNextOccurrence<CR>
+  " to make it behave like VS Code
+map gh :action ShowIntentionActions<CR>
+  " to make it behave like VS Code
 
 " TODO not working.."
 map <Leader>nd :action NextDiff<CR>
