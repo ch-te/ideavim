@@ -19,10 +19,10 @@ set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 
 " #### Maps ####
-nnoremap <leader>. @:
 nnoremap Y yg_
+nnoremap <leader>. @:
 nnoremap <Leader>sr :%s///gcI<left><left><left><left><left>
-vnoremap <Leader>sr y:%s///gcI<left><left><left><left><left><C-r>0
+vnoremap <Leader>sr y:%s///gcI<left><left><left><left><left><C-r>0<right>
 
 " #### Maps Actions ####
 nnoremap <Leader>j :action MethodDown<CR>
@@ -69,4 +69,3 @@ map <Leader>W <Plug>(easymotion-bd-W)
 
 
 "*V = like in Visual Studio Code
-
