@@ -69,3 +69,4 @@ map <Leader>W <Plug>(easymotion-bd-W)
 
 
 "*V = like in Visual Studio Code
+" ..
