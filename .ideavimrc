@@ -1,61 +1,72 @@
 let mapleader = " "
-
-"set noshowmode
-
-"Search
-set ignorecase
-set smartcase "scs
-set hlsearch
-set incsearch "Display the match for a search pattern when halfway typing it.
-
-set number relativenumber "nu rnu
-
-" Share the Systemclipboard
+set nu rnu
 set clipboard=unnamedplus
 
-" ### ideavim ###
-set ideajoin
+" #### Search #####
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch "highlight halfway typing
 
+" #### IdeaVim ####
+set ideajoin
 set idearefactormode=keep
 
+" #### Addons ####"
 set surround
-" Commands: ys, cs, ds, S(For visual mode)
-
-set multiple-cursors
-  " commands: <A-n>, <A-x>, <A-p>, g<A-n>
-
 set commentary
-  "Commands: gcc, gc + motion, v_gc
-
 set easymotion
-map <Leader> <Plug>(easymotion-prefix)
-  " activates, that only one <Leader>, instead of <Leader><Leader>, is needed
+set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
+
+" #### Maps ####
+nnoremap <leader>. @:
+nnoremap Y yg_
+nnoremap <Leader>sr :%s///gcI<left><left><left><left><left>
+vnoremap <Leader>sr y:%s///gcI<left><left><left><left><left><C-r>0
+
+" #### Maps Actions ####
+nnoremap <Leader>j :action MethodDown<CR>
+nnoremap <Leader>k :action MethodUp<CR>
+nnoremap <Leader>fs :action FileStructurePopup<CR>
+nnoremap <Leader>rn :action RenameElement<CR><ESC>
+nnoremap <Leader>re :action RecentFiles<CR>
+nnoremap <Leader>ru :action RunClass<CR>
+nnoremap <Leader>rr :action Rerun<CR>
+nnoremap <Leader>mm :action MainMenu<CR>
+nnoremap <Leader>ne :action GotoNextError<CR>
+nnoremap <Leader>pe :action GotoPreviousError<CR>
+nnoremap <Leader>se :action ShowErrorDescription<CR>
+nnoremap <Leader>mk :action MoveStatementUp<CR>
+nnoremap <Leader>mj :action MoveStatementDown<CR>
+nnoremap <Leader>dw :action ActivateDatabaseToolWindow<CR>
+nnoremap <Leader>gw :action ActivateGradleToolWindow<CR>
+nnoremap <Leader>tw :action ActivateTerminalToolWindow<CR>
+nnoremap <Leader>vw :action ActivateVersionControlToolWindow<CR>
+nnoremap gh :action ShowIntentionActions<CR> "V*
+vnoremap af :action EditorSelectWord<CR> "V*
+
+" #### Maps easymotion #### "
+map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
 map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>W <Plug>(easymotion-bd-W)
-map <Leader>j :action MethodDown<CR>
-map <Leader>k :action MethodUp<CR>
-vmap af :action EditorSelectWord<CR>
-  " to make it behave like VS Code
-map <Leader>fs :action FileStructurePopup<CR>
-  " todo addition: Clear clipboard + yank current selection , then this script + paste"
-map <Leader>sr :%s///gcI<left><left><left><left><left>
-map <Leader>re :action RenameElement<CR>
-map <Leader>ne :action GotoNextError<CR>
-map <Leader>pe :action GotoPreviousError<CR>
-map <Leader>mk :action MoveStatementUp<CR>
-map <Leader>mj :action MoveStatementDown<CR>
-map <Leader>mm :action MainMenu<CR>
-map gb :action SelectNextOccurrence<CR>
-  " to make it behave like VS Code
-map gh :action ShowIntentionActions<CR>
-  " to make it behave like VS Code
-map <Leader>rr :action Rerun<CR>
-map <Leader>ru :action RunClass<CR>
 
-" TODO not working.."
-map <Leader>nd :action NextDiff<CR>
-map <Leader>pd :action PreviousDiff<CR>
-
-" Todo open Actions:"
-  " maybe not with vim.. but with C-S-..."
+" #### TODO ####
+"map <Leader>nd :action NextDiff<CR>
+"map <Leader>pd :action PreviousDiff<CR>
 " Maybe: toggle breakpoint, Commit, push, fetch, Type-Hierachie, Super Method
+" C-K -> move method/line up ?"
+
+" ### DISABLED #####
+"vnoremap <leader>y "+y
+"nnoremap <leader>Y "+yg_
+"nnoremap <leader>y "+y
+"nnoremap <leader>yy "+yy
+"nnoremap <leader>p "+p
+"nnoremap <leader>P "+P
+"noremap <leader>p "+p
+"noremap <leader>P "+P
+
+
+
+"*V = like in Visual Studio Code
+
