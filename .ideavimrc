@@ -20,27 +20,22 @@ set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 
 " #### Maps ####
 nnoremap Y yg_
+nnoremap y_ y^
 nnoremap <leader>. @:
 nnoremap <Leader>sr :%s///gcI<left><left><left><left><left>
 vnoremap <Leader>sr y:%s///gcI<left><left><left><left><left><C-r>0<right>
 
 " #### Maps Actions ####
-nnoremap <Leader>j :action MethodDown<CR>
-nnoremap <Leader>k :action MethodUp<CR>
 nnoremap <Leader>fs :action FileStructurePopup<CR>
-nnoremap <Leader>rn :action RenameElement<CR><ESC>
 nnoremap <Leader>re :action RecentFiles<CR>
+nnoremap <Leader>mm :action MainMenu<CR>
+nnoremap <Leader>rn :action RenameElement<CR>
 nnoremap <Leader>ru :action RunClass<CR>
 nnoremap <Leader>rr :action Rerun<CR>
-nnoremap <Leader>mm :action MainMenu<CR>
 nnoremap <Leader>ne :action GotoNextError<CR>
 nnoremap <Leader>pe :action GotoPreviousError<CR>
 nnoremap <Leader>se :action ShowErrorDescription<CR>
-nnoremap <Leader>mk :action MoveStatementUp<CR>
-nnoremap <Leader>mj :action MoveStatementDown<CR>
 nnoremap <Leader>dw :action ActivateDatabaseToolWindow<CR>
-nnoremap <Leader>gw :action ActivateGradleToolWindow<CR>
-nnoremap <Leader>tw :action ActivateTerminalToolWindow<CR>
 nnoremap <Leader>vw :action ActivateVersionControlToolWindow<CR>
 nnoremap gh :action ShowIntentionActions<CR> "V*
 vnoremap af :action EditorSelectWord<CR> "V*
@@ -53,7 +48,7 @@ map <Leader>W <Plug>(easymotion-bd-W)
 " #### TODO ####
 "map <Leader>nd :action NextDiff<CR>
 "map <Leader>pd :action PreviousDiff<CR>
-" Maybe: toggle breakpoint, Commit, push, fetch, Type-Hierachie, Super Method
+" Maybe: toggle breakpoint, Commit, push, fetch, Type-Hierachie, Super Method, sourround with livetemplate
 " C-K -> move method/line up ?"
 
 " ### DISABLED #####
@@ -65,8 +60,9 @@ map <Leader>W <Plug>(easymotion-bd-W)
 "nnoremap <leader>P "+P
 "noremap <leader>p "+p
 "noremap <leader>P "+P
-
-
+"nnoremap <Leader>j :action MethodDown<CR> " -> C-A-k"
+"nnoremap <Leader>k :action MethodUp<CR> " -> C-A-j"
+"nnoremap <Leader>mk :action MoveStatementUp<CR> " -> C-M"
+"nnoremap <Leader>mj :action MoveStatementDown<CR> " -> C-A-M"
 
 "*V = like in Visual Studio Code
-" ..
