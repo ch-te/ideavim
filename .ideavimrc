@@ -17,13 +17,17 @@ set surround
 set commentary
 set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
+set textobj-entire
+set argtextobj
 
 " #### Maps ####
 nnoremap Y yg_
 nnoremap y_ y^
 nnoremap <leader>. @:
+nnoremap <leader>sc :nohl<CR>
 nnoremap <Leader>sr :%s///gcI<left><left><left><left><left>
-vnoremap <Leader>sr y:%s///gcI<left><left><left><left><left><C-r>0<right>
+vnoremap sr y:%s///gcI<left><left><left><left><left><C-r>0<right>
+vnoremap ss y/<C-r>0<CR>
 
 " #### Maps Actions ####
 nnoremap <Leader>fs :action FileStructurePopup<CR>
@@ -46,10 +50,10 @@ map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>W <Plug>(easymotion-bd-W)
 
 " #### TODO ####
+" move argument left/right C-A-H/L ?
+" Maybe: toggle breakpoint, Commit, push, fetch, Type-Hierachie, Super Method, sourround/insert with livetemplate
 "map <Leader>nd :action NextDiff<CR>
 "map <Leader>pd :action PreviousDiff<CR>
-" Maybe: toggle breakpoint, Commit, push, fetch, Type-Hierachie, Super Method, sourround with livetemplate
-" C-K -> move method/line up ?"
 
 " ### DISABLED #####
 "vnoremap <leader>y "+y
@@ -60,9 +64,9 @@ map <Leader>W <Plug>(easymotion-bd-W)
 "nnoremap <leader>P "+P
 "noremap <leader>p "+p
 "noremap <leader>P "+P
-"nnoremap <Leader>j :action MethodDown<CR> " -> C-A-k"
-"nnoremap <Leader>k :action MethodUp<CR> " -> C-A-j"
-"nnoremap <Leader>mk :action MoveStatementUp<CR> " -> C-M"
-"nnoremap <Leader>mj :action MoveStatementDown<CR> " -> C-A-M"
+"nnoremap <Leader>j :action MethodDown<CR>
+"nnoremap <Leader>k :action MethodUp<CR>
+"nnoremap <Leader>mk :action MoveStatementUp<CR>
+"nnoremap <Leader>mj :action MoveStatementDown<CR>
 
 "*V = like in Visual Studio Code
