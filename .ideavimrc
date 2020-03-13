@@ -1,8 +1,6 @@
 let mapleader = " "
 set nu rnu
 set clipboard=unnamedplus
-
-" #### Search #####
 set ignorecase
 set smartcase
 set hlsearch
@@ -12,7 +10,7 @@ set incsearch "highlight halfway typing
 set ideajoin
 set idearefactormode=keep
 
-" #### Addons ####"
+" #### Idea Plugins ####"
 set surround
 set commentary
 set easymotion
@@ -28,8 +26,12 @@ nnoremap <leader>sc :nohl<CR>
 nnoremap <Leader>sr :%s///gcI<left><left><left><left><left>
 vnoremap sr y:%s///gcI<left><left><left><left><left><C-r>0<right>
 vnoremap ss y/<C-r>0<CR>
+"yank/delete/visual method
+nnoremap ym [MeeV]My
+nnoremap dm [MeeV]Md
+nnoremap vm [MeeV]M
 
-" #### Maps Actions ####
+" #### Maps Idea Actions ####
 nnoremap <Leader>fs :action FileStructurePopup<CR>
 nnoremap <Leader>re :action RecentFiles<CR>
 nnoremap <Leader>mm :action MainMenu<CR>
@@ -41,17 +43,25 @@ nnoremap <Leader>pe :action GotoPreviousError<CR>
 nnoremap <Leader>se :action ShowErrorDescription<CR>
 nnoremap <Leader>dw :action ActivateDatabaseToolWindow<CR>
 nnoremap <Leader>vw :action ActivateVersionControlToolWindow<CR>
+nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
 nnoremap gh :action ShowIntentionActions<CR> "V*
 vnoremap af :action EditorSelectWord<CR> "V*
 
-" #### Maps easymotion #### "
+"nnoremap <leader>af :action EditorSelectWord<CR>
+"vnoremap aa :action GuiDesigner.ExpandSelection<CR>
+"vnoremap ab :action SmartSelect<CR>
+"vnoremap ac :action TableResult.GrowSelection<CR>
+
+" #### Maps Plugins #### "
 map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
 map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>W <Plug>(easymotion-bd-W)
 
 " #### TODO ####
-" move argument left/right C-A-H/L ?
-" Maybe: toggle breakpoint, Commit, push, fetch, Type-Hierachie, Super Method, sourround/insert with livetemplate
+" GotoSuperMethod
+" GotoImplementation
+"]b ]w [b [w
+" Maybe: Commit, fetch, Type-Hierachie, sourround/insert with livetemplate
 "map <Leader>nd :action NextDiff<CR>
 "map <Leader>pd :action PreviousDiff<CR>
 
