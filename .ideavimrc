@@ -27,9 +27,9 @@ nnoremap <Leader>sr :%s///gcI<left><left><left><left><left>
 vnoremap sr y:%s///gcI<left><left><left><left><left><C-r>0<right>
 vnoremap ss y/<C-r>0<CR>
 "yank/delete/visual method
-nnoremap ym [MeeV]My
-nnoremap dm [MeeV]Md
-nnoremap vm [MeeV]M
+nnoremap ym [M+eV]My
+nnoremap dm [M+eV]Md
+nnoremap vm [M+eV]M
 
 " #### Maps Idea Actions ####
 nnoremap <Leader>fs :action FileStructurePopup<CR>
@@ -41,11 +41,21 @@ nnoremap <Leader>rr :action Rerun<CR>
 nnoremap <Leader>ne :action GotoNextError<CR>
 nnoremap <Leader>pe :action GotoPreviousError<CR>
 nnoremap <Leader>se :action ShowErrorDescription<CR>
-nnoremap <Leader>dw :action ActivateDatabaseToolWindow<CR>
-nnoremap <Leader>vw :action ActivateVersionControlToolWindow<CR>
 nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
 nnoremap gh :action ShowIntentionActions<CR> "V*
 vnoremap af :action EditorSelectWord<CR> "V*
+nnoremap <C-W>n :action ViewNavigationBar<CR>
+nnoremap <C-W><C-N> :action ViewNavigationBar<CR>
+nnoremap <C-W>d :action ActivateDatabaseToolWindow<CR>
+nnoremap <C-W>d<C-D> :action ActivateDatabaseToolWindow<CR>
+nnoremap <C-W>g :action ActivateGradleToolWindow<CR>
+nnoremap <C-W><C-G> :action ActivateGradleToolWindow<CR>
+nnoremap <C-W>p :action ActivateProjectToolWindow<CR>
+nnoremap <C-W><C-P> :action ActivateProjectToolWindow<CR>
+nnoremap <C-W>t :action ActivateTODOToolWindow<CR>
+nnoremap <C-W><C-T> :action ActivateTODOToolWindow<CR>
+nnoremap <C-W>b :action Annotate<CR>
+nnoremap <C-W><C-B> :action Annotate<CR>
 
 "nnoremap <leader>af :action EditorSelectWord<CR>
 "vnoremap aa :action GuiDesigner.ExpandSelection<CR>
