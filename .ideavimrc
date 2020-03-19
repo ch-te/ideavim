@@ -42,12 +42,28 @@ nnoremap <Leader>ne :action GotoNextError<CR>
 nnoremap <Leader>pe :action GotoPreviousError<CR>
 nnoremap <Leader>se :action ShowErrorDescription<CR>
 nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
-nnoremap gh :action ShowIntentionActions<CR> "V*
-vnoremap af :action EditorSelectWord<CR> "V*
+
+"Refactor
+nnoremap <Leader>em :action ExtractMethod<CR>
+nnoremap <Leader>in :action Inline<CR>
+nnoremap <Leader>iv :action IntroduceVariable<CR>
+nnoremap <Leader>ip :action IntroduceParameter<CR>
+nnoremap <Leader>ic :action IntroduceConstant<CR>
+nnoremap <Leader>if :action IntroduceField<CR>
+nnoremap <Leader>io :action IntroduceParameterObject<CR>
+vnoremap em :action ExtractMethod<CR>
+vnoremap in :action Inline<CR>
+vnoremap iv :action IntroduceVariable<CR>
+vnoremap ip :action IntroduceParameter<CR>
+vnoremap ic :action IntroduceConstant<CR>
+vnoremap if :action IntroduceField<CR>
+vnoremap io :action IntroduceParameterObject<CR>
+
+" Window
 nnoremap <C-W>n :action ViewNavigationBar<CR>
 nnoremap <C-W><C-N> :action ViewNavigationBar<CR>
 nnoremap <C-W>d :action ActivateDatabaseToolWindow<CR>
-nnoremap <C-W>d<C-D> :action ActivateDatabaseToolWindow<CR>
+nnoremap <C-W><C-D> :action ActivateDatabaseToolWindow<CR>
 nnoremap <C-W>g :action ActivateGradleToolWindow<CR>
 nnoremap <C-W><C-G> :action ActivateGradleToolWindow<CR>
 nnoremap <C-W>p :action ActivateProjectToolWindow<CR>
@@ -57,10 +73,9 @@ nnoremap <C-W><C-T> :action ActivateTODOToolWindow<CR>
 nnoremap <C-W>b :action Annotate<CR>
 nnoremap <C-W><C-B> :action Annotate<CR>
 
-"nnoremap <leader>af :action EditorSelectWord<CR>
-"vnoremap aa :action GuiDesigner.ExpandSelection<CR>
-"vnoremap ab :action SmartSelect<CR>
-"vnoremap ac :action TableResult.GrowSelection<CR>
+"misc
+nnoremap gh :action ShowIntentionActions<CR> "V*
+vnoremap af :action EditorSelectWord<CR> "V*
 
 " #### Maps Plugins #### "
 map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
@@ -71,6 +86,8 @@ map <Leader>W <Plug>(easymotion-bd-W)
 " GotoSuperMethod
 " GotoImplementation
 "]b ]w [b [w
+"IntroduceFunctionalVariable
+"IntroduceFunctionalParameter                       <A-C-S-P>
 " Maybe: Commit, fetch, Type-Hierachie, sourround/insert with livetemplate
 "map <Leader>nd :action NextDiff<CR>
 "map <Leader>pd :action PreviousDiff<CR>
@@ -88,5 +105,15 @@ map <Leader>W <Plug>(easymotion-bd-W)
 "nnoremap <Leader>k :action MethodUp<CR>
 "nnoremap <Leader>mk :action MoveStatementUp<CR>
 "nnoremap <Leader>mj :action MoveStatementDown<CR>
+"nnoremap <leader>af :action EditorSelectWord<CR>
+"vnoremap aa :action GuiDesigner.ExpandSelection<CR>
+"vnoremap ab :action SmartSelect<CR>
+"vnoremap ac :action TableResult.GrowSelection<CR>
+
+"nnoremap <leader>af :action EditorSelectWord<CR>
+"vnoremap aa :action GuiDesigner.ExpandSelection<CR>
+"vnoremap ab :action SmartSelect<CR>
+"vnoremap ac :action TableResult.GrowSelection<CR>
+
 
 "*V = like in Visual Studio Code
