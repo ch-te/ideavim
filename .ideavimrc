@@ -52,12 +52,12 @@ nnoremap <Leader>ic :action IntroduceConstant<CR>
 nnoremap <Leader>if :action IntroduceField<CR>
 nnoremap <Leader>io :action IntroduceParameterObject<CR>
 vnoremap em :action ExtractMethod<CR>
-vnoremap in :action Inline<CR>
-vnoremap iv :action IntroduceVariable<CR>
-vnoremap ip :action IntroduceParameter<CR>
-vnoremap ic :action IntroduceConstant<CR>
-vnoremap if :action IntroduceField<CR>
-vnoremap io :action IntroduceParameterObject<CR>
+"vnoremap in :action Inline<CR>
+"vnoremap iv :action IntroduceVariable<CR>
+"vnoremap ip :action IntroduceParameter<CR>
+"vnoremap ic :action IntroduceConstant<CR>
+"vnoremap if :action IntroduceField<CR>
+"vnoremap io :action IntroduceParameterObject<CR>
 
 " Window
 nnoremap <C-W>n :action ViewNavigationBar<CR>
@@ -85,7 +85,10 @@ map <Leader>W <Plug>(easymotion-bd-W)
 " #### TODO ####
 " GotoSuperMethod
 " GotoImplementation
-"]b ]w [b [w
+" vim camel case
+" vim debug..
+" vim smooth scorlling"
+" ]b ]w [b [w
 "IntroduceFunctionalVariable
 "IntroduceFunctionalParameter                       <A-C-S-P>
 " Maybe: Commit, fetch, Type-Hierachie, sourround/insert with livetemplate
