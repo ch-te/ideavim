@@ -38,26 +38,25 @@ nnoremap <Leader>mm :action MainMenu<CR>
 nnoremap <Leader>rn :action RenameElement<CR>
 nnoremap <Leader>ru :action RunClass<CR>
 nnoremap <Leader>rr :action Rerun<CR>
-nnoremap <Leader>ne :action GotoNextError<CR>
-nnoremap <Leader>pe :action GotoPreviousError<CR>
 nnoremap <Leader>se :action ShowErrorDescription<CR>
 nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
+nnoremap <Leader>ne :action GotoNextError<CR>
+nnoremap <Leader>pe :action GotoPreviousError<CR>
+nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap <Leader>gs :action GotoSuperMethod<CR>
+
+nnoremap <Leader>gs :action GotoSuperMethod<CR>
+nnoremap <Leader>gs :action GotoSuperMethod<CR>
+nnoremap <Leader>gs :action GotoSuperMethod<CR>
 
 "Refactor
-nnoremap <Leader>em :action ExtractMethod<CR>
-nnoremap <Leader>in :action Inline<CR>
-nnoremap <Leader>iv :action IntroduceVariable<CR>
-nnoremap <Leader>ip :action IntroduceParameter<CR>
-nnoremap <Leader>ic :action IntroduceConstant<CR>
-nnoremap <Leader>if :action IntroduceField<CR>
-nnoremap <Leader>io :action IntroduceParameterObject<CR>
-vnoremap em :action ExtractMethod<CR>
-"vnoremap in :action Inline<CR>
-"vnoremap iv :action IntroduceVariable<CR>
-"vnoremap ip :action IntroduceParameter<CR>
-"vnoremap ic :action IntroduceConstant<CR>
-"vnoremap if :action IntroduceField<CR>
-"vnoremap io :action IntroduceParameterObject<CR>
+noremap <Leader>em :action ExtractMethod<CR>
+noremap <Leader>in :action Inline<CR>
+noremap <Leader>iv :action IntroduceVariable<CR>
+noremap <Leader>ip :action IntroduceParameter<CR>
+noremap <Leader>ic :action IntroduceConstant<CR>
+noremap <Leader>if :action IntroduceField<CR>
+noremap <Leader>io :action IntroduceParameterObject<CR>
 
 " Window
 nnoremap <C-W>n :action ViewNavigationBar<CR>
@@ -83,12 +82,16 @@ map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>W <Plug>(easymotion-bd-W)
 
 " #### TODO ####
-" GotoSuperMethod
-" GotoImplementation
-" vim camel case
+"TypeHierarchyBase.BaseOnThisType
+"TypeHierarchy
+"MethodHierarchy.BaseOnThisMethod
+"MethodHierarchy
+"CallHierarchy
+"CallHierarchy.BaseOnThisMethod
+
+" vim camel case ]b ]w [b [w
 " vim debug..
 " vim smooth scorlling"
-" ]b ]w [b [w
 "IntroduceFunctionalVariable
 "IntroduceFunctionalParameter                       <A-C-S-P>
 " Maybe: Commit, fetch, Type-Hierachie, sourround/insert with livetemplate
