@@ -45,10 +45,6 @@ nnoremap <Leader>pe :action GotoPreviousError<CR>
 nnoremap <Leader>gi :action GotoImplementation<CR>
 nnoremap <Leader>gs :action GotoSuperMethod<CR>
 
-nnoremap <Leader>gs :action GotoSuperMethod<CR>
-nnoremap <Leader>gs :action GotoSuperMethod<CR>
-nnoremap <Leader>gs :action GotoSuperMethod<CR>
-
 "Refactor
 noremap <Leader>em :action ExtractMethod<CR>
 noremap <Leader>in :action Inline<CR>
@@ -82,6 +78,7 @@ map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>W <Plug>(easymotion-bd-W)
 
 " #### TODO ####
+" gotoTest(Show Tests)"
 "TypeHierarchyBase.BaseOnThisType
 "TypeHierarchy
 "MethodHierarchy.BaseOnThisMethod
