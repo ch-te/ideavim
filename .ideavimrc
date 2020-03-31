@@ -21,6 +21,8 @@ set argtextobj
 " #### Maps ####
 nnoremap Y yg_
 nnoremap y_ y^
+nnoremap d_ d^
+nnoremap c_ c^
 nnoremap <leader>. @:
 nnoremap <leader>sc :nohl<CR>
 nnoremap <Leader>sr :%s///gcI<left><left><left><left><left>
@@ -42,17 +44,18 @@ nnoremap <Leader>se :action ShowErrorDescription<CR>
 nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
 nnoremap <Leader>ne :action GotoNextError<CR>
 nnoremap <Leader>pe :action GotoPreviousError<CR>
-nnoremap <Leader>gi :action GotoImplementation<CR>
-nnoremap <Leader>gs :action GotoSuperMethod<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
 
 "Refactor
 noremap <Leader>em :action ExtractMethod<CR>
 noremap <Leader>in :action Inline<CR>
-noremap <Leader>iv :action IntroduceVariable<CR>
-noremap <Leader>ip :action IntroduceParameter<CR>
-noremap <Leader>ic :action IntroduceConstant<CR>
-noremap <Leader>if :action IntroduceField<CR>
-noremap <Leader>io :action IntroduceParameterObject<CR>
+noremap <Leader>ev :action IntroduceVariable<CR>
+noremap <Leader>ep :action IntroduceParameter<CR>
+noremap <Leader>ec :action IntroduceConstan<CR>
+noremap <Leader>ef :action IntroduceField<CR>
+noremap <Leader>eo :action IntroduceParameterObject<CR>
 
 " Window
 nnoremap <C-W>n :action ViewNavigationBar<CR>
@@ -67,6 +70,8 @@ nnoremap <C-W>t :action ActivateTODOToolWindow<CR>
 nnoremap <C-W><C-T> :action ActivateTODOToolWindow<CR>
 nnoremap <C-W>b :action Annotate<CR>
 nnoremap <C-W><C-B> :action Annotate<CR>
+nnoremap <C-W>f :action FileStructurePopup<CR>
+nnoremap <C-W><C-F> :action FileStructurePopup<CR>
 
 "misc
 nnoremap gh :action ShowIntentionActions<CR> "V*
@@ -78,7 +83,7 @@ map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>W <Plug>(easymotion-bd-W)
 
 " #### TODO ####
-" gotoTest(Show Tests)"
+" "Run this", "Run all", "Stop execution", "Debug this"
 "TypeHierarchyBase.BaseOnThisType
 "TypeHierarchy
 "MethodHierarchy.BaseOnThisMethod
