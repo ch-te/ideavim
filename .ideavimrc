@@ -17,6 +17,7 @@ set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 set textobj-entire
 set argtextobj
+set ReplaceWithRegister
 
 " #### Maps ####
 nnoremap Y yg_
@@ -32,6 +33,9 @@ vnoremap ss y/<C-r>0<CR>
 nnoremap ym [M+eV]My
 nnoremap dm [M+eV]Md
 nnoremap vm [M+eV]M
+nnoremap ö $
+"nnoremap ä } " better caps-ä ?"
+"nnoremap Ä { " better caps-Ä ?"
 
 " #### Maps Idea Actions ####
 nnoremap <Leader>fs :action FileStructurePopup<CR>
@@ -53,7 +57,7 @@ noremap <Leader>em :action ExtractMethod<CR>
 noremap <Leader>in :action Inline<CR>
 noremap <Leader>ev :action IntroduceVariable<CR>
 noremap <Leader>ep :action IntroduceParameter<CR>
-noremap <Leader>ec :action IntroduceConstan<CR>
+noremap <Leader>ec :action IntroduceConstant<CR>
 noremap <Leader>ef :action IntroduceField<CR>
 noremap <Leader>eo :action IntroduceParameterObject<CR>
 
@@ -83,7 +87,13 @@ map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>W <Plug>(easymotion-bd-W)
 
 " #### TODO ####
-" "Run this", "Run all", "Stop execution", "Debug this"
+" "Run this", "Run all", "Stop execution", "Debug this", Code coverage
+" jumb back to last file, maybe via Tab actions."
+" C-S-h/l change method private -> public -> ...
+" C-S-j/k change variable/method final/..(?)
+" jumb to next "Element". Example-> return findReference(seaShip, this::isKnExportReference, KnExportReference::knExportReference);
+" correct copy, yank, delte methode"
+* change C-A j/k to A j/k
 "TypeHierarchyBase.BaseOnThisType
 "TypeHierarchy
 "MethodHierarchy.BaseOnThisMethod
