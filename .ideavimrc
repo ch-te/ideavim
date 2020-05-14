@@ -1,5 +1,5 @@
 let mapleader = " "
-set nu rnu
+"set nu rnu
 set clipboard=unnamedplus
 set ignorecase
 set smartcase
@@ -37,54 +37,82 @@ nnoremap ö $
 "nnoremap ä } " better caps-ä ?"
 "nnoremap Ä { " better caps-Ä ?"
 
+" Comma for major mode
+nmap , <leader>m
+vmap , <leader>m
+
+" #### Replace Keymaps "
+nnoremap <C-,> :action ShowSettings<CR>
+
+
 " #### Maps Idea Actions ####
-nnoremap <Leader>fs :action FileStructurePopup<CR>
-nnoremap <Leader>re :action RecentFiles<CR>
-nnoremap <Leader>mm :action MainMenu<CR>
-nnoremap <Leader>rn :action RenameElement<CR>
-nnoremap <Leader>ru :action RunClass<CR>
-nnoremap <Leader>rr :action Rerun<CR>
-nnoremap <Leader>se :action ShowErrorDescription<CR>
-nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
-nnoremap <Leader>ne :action GotoNextError<CR>
-nnoremap <Leader>pe :action GotoPreviousError<CR>
-nnoremap gi :action GotoImplementation<CR>
-nnoremap gs :action GotoSuperMethod<CR>
-nnoremap gt :action GotoTest<CR>
+source ~/.intellimacs/spacemacs.vim
+source ~/.intellimacs/extra.vim
+source ~/.intellimacs/major.vim
 
-"Refactor
-noremap <Leader>em :action ExtractMethod<CR>
-noremap <Leader>in :action Inline<CR>
-noremap <Leader>ev :action IntroduceVariable<CR>
-noremap <Leader>ep :action IntroduceParameter<CR>
-noremap <Leader>ec :action IntroduceConstant<CR>
-noremap <Leader>ef :action IntroduceField<CR>
-noremap <Leader>eo :action IntroduceParameterObject<CR>
+nnoremap <Leader>mgs :action GotoSuperMethod<CR>
 
-" Window
-nnoremap <C-W>n :action ViewNavigationBar<CR>
-nnoremap <C-W><C-N> :action ViewNavigationBar<CR>
-nnoremap <C-W>d :action ActivateDatabaseToolWindow<CR>
-nnoremap <C-W><C-D> :action ActivateDatabaseToolWindow<CR>
-nnoremap <C-W>g :action ActivateGradleToolWindow<CR>
-nnoremap <C-W><C-G> :action ActivateGradleToolWindow<CR>
-nnoremap <C-W>p :action ActivateProjectToolWindow<CR>
-nnoremap <C-W><C-P> :action ActivateProjectToolWindow<CR>
-nnoremap <C-W>t :action ActivateTODOToolWindow<CR>
-nnoremap <C-W><C-T> :action ActivateTODOToolWindow<CR>
-nnoremap <C-W>b :action Annotate<CR>
-nnoremap <C-W><C-B> :action Annotate<CR>
-nnoremap <C-W>f :action FileStructurePopup<CR>
-nnoremap <C-W><C-F> :action FileStructurePopup<CR>
+"nnoremap <Leader>rr :action Rerun<CR>
+"nnoremap <Leader>mm :action MainMenu<CR>
+"nnoremap gs :action GotoSuperMethod<CR>
 
-"misc
-nnoremap gh :action ShowIntentionActions<CR> "V*
-vnoremap af :action EditorSelectWord<CR> "V*
+"nnoremap <Leader>fs :action FileStructurePopup<CR>
+"nnoremap <Leader>re :action RecentFiles<CR>
+"nnoremap <Leader>rn :action RenameElement<CR>
+"nnoremap <Leader>ru :action RunClass<CR>
+"nnoremap <Leader>se :action ShowErrorDescription<CR>
+"nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
+"nnoremap <Leader>ne :action GotoNextError<CR>
+"nnoremap <Leader>pe :action GotoPreviousError<CR>
+"nnoremap <Leader>cf :action ReformatCode<CR>
+"nnoremap gi :action GotoImplementation<CR>
+"nnoremap gt :action GotoTest<CR>
+"
+""Refactor
+" SPC m r"
+"noremap <Leader>in :action Inline<CR>
+nnoremap <leader>mrin    :action Inline<CR>
+vnoremap <leader>mrin    <Esc>:action Inline<CR>
 
-" #### Maps Plugins #### "
-map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
-map <Leader>w <Plug>(easymotion-bd-w)
-map <Leader>W <Plug>(easymotion-bd-W)
+"noremap <Leader>ev :action IntroduceVariable<CR>
+nnoremap <leader>mrev    :action IntroduceVariable<CR>
+vnoremap <leader>mrev    <Esc>:action IntroduceVariable<CR>
+
+"noremap <Leader>ep :action IntroduceParameter<CR>
+nnoremap <leader>mrep    :action IntroduceParameter<CR>
+vnoremap <leader>mrep    <Esc>:action IntroduceParameter<CR>
+
+"noremap <Leader>ec :action IntroduceConstant<CR>
+nnoremap <leader>mrec    :action IntroduceConstant<CR>
+vnoremap <leader>mrec    <Esc>:action IntroduceConstant<CR>
+
+"noremap <Leader>ef :action IntroduceField<CR>
+nnoremap <leader>mref    :action IntroduceField<CR>
+vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
+
+"noremap <Leader>eo :action IntroduceParameterObject<CR>
+nnoremap <leader>mreo    :action IntroduceParameterObject<CR>
+vnoremap <leader>mreo    <Esc>:action IntroduceParameterObject<CR>
+
+
+"noremap <Leader>em :action ExtractMethod<CR>
+"
+"" Window
+"nnoremap <C-W>n :action ViewNavigationBar<CR>
+"nnoremap <C-W>d :action ActivateDatabaseToolWindow<CR>
+"nnoremap <C-W>g :action ActivateGradleToolWindow<CR>
+"nnoremap <C-W>t :action ActivateTODOToolWindow<CR>
+"nnoremap <C-W>p :action ActivateProjectToolWindow<CR>
+"nnoremap <C-W>b :action Annotate<CR>
+"
+""misc
+"nnoremap gh :action ShowIntentionActions<CR> "V*
+"vnoremap af :action EditorSelectWord<CR> "V*
+"
+"" #### Maps Plugins #### "
+"map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
+"map <Leader>w <Plug>(easymotion-bd-w)
+"map <Leader>W <Plug>(easymotion-bd-W)
 
 " #### TODO ####
 " "Run this", "Run all", "Stop execution", "Debug this", Code coverage
