@@ -33,7 +33,7 @@ vnoremap ss y/<C-r>0<CR>
 nnoremap ym [M+eV]My
 nnoremap dm [M+eV]Md
 nnoremap vm [M+eV]M
-nnoremap ö $
+"nnoremap ö $
 "nnoremap ä } " better caps-ä ?"
 "nnoremap Ä { " better caps-Ä ?"
 
@@ -45,29 +45,20 @@ vmap , <leader>m
 nnoremap <C-,> :action ShowSettings<CR>
 
 
+
 " #### Maps Idea Actions ####
 source ~/.intellimacs/spacemacs.vim
 source ~/.intellimacs/extra.vim
 source ~/.intellimacs/major.vim
 
+nnoremap gs :action GotoSuperMethod<CR>
 nnoremap <Leader>mgs :action GotoSuperMethod<CR>
 
-"nnoremap <Leader>rr :action Rerun<CR>
-"nnoremap <Leader>mm :action MainMenu<CR>
-"nnoremap gs :action GotoSuperMethod<CR>
+nnoremap <Leader>Rl :action Rerun<CR>
 
-"nnoremap <Leader>fs :action FileStructurePopup<CR>
-"nnoremap <Leader>re :action RecentFiles<CR>
-"nnoremap <Leader>rn :action RenameElement<CR>
-"nnoremap <Leader>ru :action RunClass<CR>
-"nnoremap <Leader>se :action ShowErrorDescription<CR>
-"nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
-"nnoremap <Leader>ne :action GotoNextError<CR>
-"nnoremap <Leader>pe :action GotoPreviousError<CR>
-"nnoremap <Leader>cf :action ReformatCode<CR>
-"nnoremap gi :action GotoImplementation<CR>
-"nnoremap gt :action GotoTest<CR>
-"
+" Coverage
+nnoremap <Leader>Cc :action RunCoverage<CR>
+
 ""Refactor
 " SPC m r"
 "noremap <Leader>in :action Inline<CR>
@@ -94,19 +85,19 @@ vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
 nnoremap <leader>mreo    :action IntroduceParameterObject<CR>
 vnoremap <leader>mreo    <Esc>:action IntroduceParameterObject<CR>
 
-
 "noremap <Leader>em :action ExtractMethod<CR>
-"
-"" Window
-"nnoremap <C-W>n :action ViewNavigationBar<CR>
-"nnoremap <C-W>d :action ActivateDatabaseToolWindow<CR>
-"nnoremap <C-W>g :action ActivateGradleToolWindow<CR>
-"nnoremap <C-W>t :action ActivateTODOToolWindow<CR>
-"nnoremap <C-W>p :action ActivateProjectToolWindow<CR>
-"nnoremap <C-W>b :action Annotate<CR>
-"
+
+"Database
+nnoremap <Leader>dd :action ActivateDatabaseToolWindow<CR>
+
+" Gradle"
+nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
+
+"" git/versions control
+nnoremap <Leader>gg :action ActivateCommitToolWindow<CR>
+nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
+
 ""misc
-"nnoremap gh :action ShowIntentionActions<CR> "V*
 "vnoremap af :action EditorSelectWord<CR> "V*
 "
 "" #### Maps Plugins #### "
@@ -115,30 +106,48 @@ vnoremap <leader>mreo    <Esc>:action IntroduceParameterObject<CR>
 "map <Leader>W <Plug>(easymotion-bd-W)
 
 " #### TODO ####
-" "Run this", "Run all", "Stop execution", "Debug this", Code coverage
-" jumb back to last file, maybe via Tab actions."
-" C-S-h/l change method private -> public -> ...
-" C-S-j/k change variable/method final/..(?)
-" jumb to next "Element". Example-> return findReference(seaShip, this::isKnExportReference, KnExportReference::knExportReference);
-" correct copy, yank, delte methode"
-* change C-A j/k to A j/k
-"TypeHierarchyBase.BaseOnThisType
-"TypeHierarchy
-"MethodHierarchy.BaseOnThisMethod
-"MethodHierarchy
-"CallHierarchy
-"CallHierarchy.BaseOnThisMethod
+" Code coverage
 
-" vim camel case ]b ]w [b [w
-" vim debug..
-" vim smooth scorlling"
-"IntroduceFunctionalVariable
-"IntroduceFunctionalParameter                       <A-C-S-P>
-" Maybe: Commit, fetch, Type-Hierachie, sourround/insert with livetemplate
 "map <Leader>nd :action NextDiff<CR>
 "map <Leader>pd :action PreviousDiff<CR>
 
+"<leader>mh...
+"TypeHierarchyBase.BaseOnThisType
+"MethodHierarchy.BaseOnThisMethod
+"MethodHierarchy
+"CallHierarchy.BaseOnThisMethod
+
+"better vim camel case ]b ]w [b [w (SPC x i)
+
+"nnoremap <Leader>mm :action MainMenu<CR>
+
+" sourround/insert with livetemplate
+
+" jumb to next "Element". Example-> return findReference(seaShip, this::isKnExportReference, KnExportReference::knExportReference);
+" C-S-h/l change method private -> public -> ...
+" C-S-j/k change variable/method final/..(?)
+* change C-A j/k to A j/k
+" correct copy, yank, delte methode"
+
+" vim smooth scorlling"
+"introduceFunctionalVariable
+
 " ### DISABLED #####
+"nnoremap <Leader>rr :action Rerun<CR>
+"nnoremap <Leader>fs :action FileStructurePopup<CR>
+"nnoremap <Leader>re :action RecentFiles<CR>
+"nnoremap <Leader>rn :action RenameElement<CR>
+"nnoremap <Leader>ru :action RunClass<CR>
+"nnoremap <Leader>se :action ShowErrorDescription<CR>
+"nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
+"nnoremap <Leader>ne :action GotoNextError<CR>
+"nnoremap <Leader>pe :action GotoPreviousError<CR>
+"nnoremap <Leader>cf :action ReformatCode<CR>
+"nnoremap gi :action GotoImplementation<CR>
+"nnoremap gt :action GotoTest<CR>
+
+"nnoremap <C-W>n :action ViewNavigationBar<CR>
+
 "vnoremap <leader>y "+y
 "nnoremap <leader>Y "+yg_
 "nnoremap <leader>y "+y
@@ -147,10 +156,6 @@ vnoremap <leader>mreo    <Esc>:action IntroduceParameterObject<CR>
 "nnoremap <leader>P "+P
 "noremap <leader>p "+p
 "noremap <leader>P "+P
-"nnoremap <Leader>j :action MethodDown<CR>
-"nnoremap <Leader>k :action MethodUp<CR>
-"nnoremap <Leader>mk :action MoveStatementUp<CR>
-"nnoremap <Leader>mj :action MoveStatementDown<CR>
 "nnoremap <leader>af :action EditorSelectWord<CR>
 "vnoremap aa :action GuiDesigner.ExpandSelection<CR>
 "vnoremap ab :action SmartSelect<CR>
@@ -161,5 +166,3 @@ vnoremap <leader>mreo    <Esc>:action IntroduceParameterObject<CR>
 "vnoremap ab :action SmartSelect<CR>
 "vnoremap ac :action TableResult.GrowSelection<CR>
 
-
-"*V = like in Visual Studio Code
