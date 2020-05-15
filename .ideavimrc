@@ -53,7 +53,6 @@ vmap , <leader>m
 " #### Replace Keymaps "
 "ParameterInfo
 "SelectInProjectView
-
 nnoremap <C-,> :action ShowSettings<CR>
 vnoremap <C-,> :action ShowSettings<CR>
 
@@ -61,10 +60,6 @@ nnoremap <C-j> :action MethodDown<CR>
 vnoremap <C-j> :action MethodDown<CR>
 nnoremap <C-k> :action MethodUp<CR>
 vnoremap <C-k> :action MethodUp<CR>
-nnoremap <C-j> :action ChooseNextSubsequentPropertyValueEditorAction<CR>
-vnoremap <C-j> :action ChooseNextSubsequentPropertyValueEditorAction<CR>
-nnoremap <C-k> :action ChoosePrevSubsequentPropertyValueEditorAction<CR>
-vnoremap <C-k> :action ChoosePrevSubsequentPropertyValueEditorAction<CR>
 
 nnoremap <A-j> :action MoveLineDown<CR>
 vnoremap <A-j> :action MoveLineDown<CR>
@@ -169,6 +164,11 @@ nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
 "nnoremap gt :action GotoTest<CR>
 
 "nnoremap <C-W>n :action ViewNavigationBar<CR>
+
+"nnoremap <C-j> :action ChooseNextSubsequentPropertyValueEditorAction<CR>
+"vnoremap <C-j> :action ChooseNextSubsequentPropertyValueEditorAction<CR>
+"nnoremap <C-k> :action ChoosePrevSubsequentPropertyValueEditorAction<CR>
+"vnoremap <C-k> :action ChoosePrevSubsequentPropertyValueEditorAction<CR>
 
 "vnoremap <leader>y "+y
 "nnoremap <leader>Y "+yg_
