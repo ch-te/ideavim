@@ -1,11 +1,3 @@
-let mapleader = " "
-"set nu rnu
-set clipboard=unnamedplus
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch "highlight halfway typing
-
 " #### IdeaVim ####
 set ideajoin
 set idearefactormode=keep
@@ -19,6 +11,25 @@ set textobj-entire
 set argtextobj
 set ReplaceWithRegister
 
+"" #### Maps Plugins #### "
+"map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
+"map <Leader>w <Plug>(easymotion-bd-w)
+"map <Leader>W <Plug>(easymotion-bd-W)
+
+####
+let mapleader = " "
+set nu "rnu
+set clipboard=unnamedplus
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch "highlight halfway typing
+
+####
+source ~/.intellimacs/spacemacs.vim
+source ~/.intellimacs/extra.vim
+source ~/.intellimacs/major.vim
+
 " #### Maps ####
 nnoremap Y yg_
 nnoremap y_ y^
@@ -29,31 +40,51 @@ nnoremap <leader>sc :nohl<CR>
 nnoremap <Leader>sr :%s///gcI<left><left><left><left><left>
 vnoremap sr y:%s///gcI<left><left><left><left><left><C-r>0<right>
 vnoremap ss y/<C-r>0<CR>
+
 "yank/delete/visual method
 nnoremap ym [M+eV]My
 nnoremap dm [M+eV]Md
 nnoremap vm [M+eV]M
-"nnoremap ö $
-"nnoremap ä } " better caps-ä ?"
-"nnoremap Ä { " better caps-Ä ?"
 
 " Comma for major mode
 nmap , <leader>m
 vmap , <leader>m
 
 " #### Replace Keymaps "
-nnoremap <C-,> :action ShowSettings<CR>
+"ParameterInfo
+"SelectInProjectView
 
+nnoremap <C-,> :action ShowSettings<CR>
+vnoremap <C-,> :action ShowSettings<CR>
+
+nnoremap <C-j> :action MethodDown<CR>
+vnoremap <C-j> :action MethodDown<CR>
+nnoremap <C-k> :action MethodUp<CR>
+vnoremap <C-k> :action MethodUp<CR>
+nnoremap <C-j> :action ChooseNextSubsequentPropertyValueEditorAction<CR>
+vnoremap <C-j> :action ChooseNextSubsequentPropertyValueEditorAction<CR>
+nnoremap <C-k> :action ChoosePrevSubsequentPropertyValueEditorAction<CR>
+vnoremap <C-k> :action ChoosePrevSubsequentPropertyValueEditorAction<CR>
+
+nnoremap <A-j> :action MoveLineDown<CR>
+vnoremap <A-j> :action MoveLineDown<CR>
+nnoremap <A-k> :action MoveLineUp<CR>
+vnoremap <A-k> :action MoveLineUp<CR>
+nnoremap <A-S-j> :action MoveStatementDown<CR>
+vnoremap <A-S-j> :action MoveStatementDown<CR>
+nnoremap <A-S-k> :action MoveStatementUp<CR>
+vnoremap <A-S-k> :action MoveStatementUp<CR>
 
 
 " #### Maps Idea Actions ####
-source ~/.intellimacs/spacemacs.vim
-source ~/.intellimacs/extra.vim
-source ~/.intellimacs/major.vim
+" File"
+nnoremap <leader>fo :action OpenFile<CR>
 
+"..
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap <Leader>mgs :action GotoSuperMethod<CR>
 
+" Refactor"
 nnoremap <Leader>Rl :action Rerun<CR>
 
 " Coverage
@@ -97,17 +128,8 @@ nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 nnoremap <Leader>gg :action ActivateCommitToolWindow<CR>
 nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
 
-""misc
-"vnoremap af :action EditorSelectWord<CR> "V*
-"
-"" #### Maps Plugins #### "
-"map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
-"map <Leader>w <Plug>(easymotion-bd-w)
-"map <Leader>W <Plug>(easymotion-bd-W)
 
 " #### TODO ####
-" Code coverage
-
 "map <Leader>nd :action NextDiff<CR>
 "map <Leader>pd :action PreviousDiff<CR>
 
