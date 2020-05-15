@@ -46,9 +46,6 @@ nnoremap ym [M+eV]My
 nnoremap dm [M+eV]Md
 nnoremap vm [M+eV]M
 
-" Comma for major mode
-nmap , <leader>m
-vmap , <leader>m
 
 " #### Replace Keymaps "
 "ParameterInfo
@@ -72,14 +69,22 @@ vnoremap <A-S-k> :action MoveStatementUp<CR>
 
 
 " #### Maps Idea Actions ####
+" Comma for major mode
+nmap , <leader>m
+vmap , <leader>m
+
+nnoremap <Leader><Leader> :action RecentFiles<CR>
+vnoremap <Leader><Leader> :action RecentFiles<CR>
+
 " File"
 nnoremap <leader>fo :action OpenFile<CR>
 
 "..
+nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap <Leader>mgs :action GotoSuperMethod<CR>
 
-" Refactor"
+" Run"
 nnoremap <Leader>Rl :action Rerun<CR>
 
 " Coverage
@@ -152,7 +157,6 @@ nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
 " ### DISABLED #####
 "nnoremap <Leader>rr :action Rerun<CR>
 "nnoremap <Leader>fs :action FileStructurePopup<CR>
-"nnoremap <Leader>re :action RecentFiles<CR>
 "nnoremap <Leader>rn :action RenameElement<CR>
 "nnoremap <Leader>ru :action RunClass<CR>
 "nnoremap <Leader>se :action ShowErrorDescription<CR>
@@ -160,7 +164,6 @@ nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
 "nnoremap <Leader>ne :action GotoNextError<CR>
 "nnoremap <Leader>pe :action GotoPreviousError<CR>
 "nnoremap <Leader>cf :action ReformatCode<CR>
-"nnoremap gi :action GotoImplementation<CR>
 "nnoremap gt :action GotoTest<CR>
 
 "nnoremap <C-W>n :action ViewNavigationBar<CR>
