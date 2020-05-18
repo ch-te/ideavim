@@ -26,7 +26,6 @@ set hlsearch
 set incsearch "highlight halfway typing
 
 ####
-
 source ~/.intellimacs/spacemacs.vim
 source ~/.intellimacs/extra.vim
 source ~/.intellimacs/major.vim
@@ -51,10 +50,6 @@ nnoremap vm [M+eV]M
 
 
 " #### Replace Keymaps "
-"todo
-"ParameterInfo
-"SelectInProjectView
-
 nnoremap <C-,> :action ShowSettings<CR>
 
 nnoremap <C-,> :action ShowSettings<CR>
@@ -80,10 +75,8 @@ nmap , <leader>m
 vmap , <leader>m
 
 nnoremap <Leader><Leader> :action RecentFiles<CR>
-vnoremap <Leader><Leader> :action RecentFiles<CR>
-
-noremap <leader>* viw:action FindInPath<CR>
-vnoremap <leader>* viw:action FindInPath<CR>
+nnoremap <leader>* viw:action FindInPath<CR>
+nnoremap <leader>jd :action SelectInProjectView<CR>
 
 " File"
 nnoremap <leader>fo :action OpenFile<CR>
@@ -121,10 +114,6 @@ vnoremap <leader>mrec    <Esc>:action IntroduceConstant<CR>
 nnoremap <leader>mref    :action IntroduceField<CR>
 vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
 
-"noremap <Leader>eo :action IntroduceParameterObject<CR>
-nnoremap <leader>mreo    :action IntroduceParameterObject<CR>
-vnoremap <leader>mreo    <Esc>:action IntroduceParameterObject<CR>
-
 "noremap <Leader>em :action ExtractMethod<CR>
 
 "Database
@@ -136,6 +125,14 @@ nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 "" git/versions control
 nnoremap <Leader>gg :action ActivateCommitToolWindow<CR>
 nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
+nnoremap <leader>gf :action Git.Fetch<CR>
+nnoremap <leader>gF :action Vcs.UpdateProject<CR>
+nnoremap <leader>ga :action Annotate<CR>
+nnoremap <leader>gl :action Vcs.Show.Log<CR>
+
+" debug"
+nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
+nnoremap <leader>mdi    :action StepInto<CR>
 
 " MISC"
 set visualbell
@@ -144,6 +141,8 @@ set noerrorbells
 " #### TODO ####
 "map <Leader>nd :action NextDiff<CR>
 "map <Leader>pd :action PreviousDiff<CR>
+
+" ParameterInfo
 
 "<leader>mh...
 "TypeHierarchyBase.BaseOnThisType
@@ -202,3 +201,4 @@ set noerrorbells
 "vnoremap aa :action GuiDesigner.ExpandSelection<CR>
 "vnoremap ab :action SmartSelect<CR>
 "vnoremap ac :action TableResult.GrowSelection<CR>
+
