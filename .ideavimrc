@@ -75,22 +75,33 @@ nmap , <leader>m
 vmap , <leader>m
 
 nnoremap <Leader><Leader> :action RecentFiles<CR>
+vnoremap <Leader><Leader> :action RecentFiles<CR>
 nnoremap <leader>* viw:action FindInPath<CR>
 nnoremap <leader>jd :action SelectInProjectView<CR>
 
 " File"
 nnoremap <leader>fo :action OpenFile<CR>
+vnoremap <leader>fo :action OpenFile<CR>
 
 "..
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap <Leader>mgs :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+vnoremap gt :action GotoTest<CR>
+
 
 " Run"
+nnoremap <Leader>Rr :action RunClass<CR>
+vnoremap <Leader>Rr :action RunClass<CR>
 nnoremap <Leader>Rl :action Rerun<CR>
+vnoremap <Leader>Rl :action Rerun<CR>
+nnoremap <Leader>Rc :action RunCoverage<CR>
+vnoremap <Leader>Rc :action RunCoverage<CR>
 
-" Coverage
-nnoremap <Leader>Cc :action RunCoverage<CR>
+" Insertions
+nnoremap <leader>is    :action InsertLiveTemplate<CR>a
+vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 
 ""Refactor
 " SPC m r"
@@ -152,7 +163,7 @@ set noerrorbells
 
 "better vim camel case ]b ]w [b [w (SPC x i)
 
-"nnoremap <Leader>mm :action MainMenu<CR>
+nnoremap <Leader>mm :action MainMenu<CR>
 
 " sourround/insert with livetemplate
 
@@ -169,13 +180,11 @@ set noerrorbells
 "nnoremap <Leader>rr :action Rerun<CR>
 "nnoremap <Leader>fs :action FileStructurePopup<CR>
 "nnoremap <Leader>rn :action RenameElement<CR>
-"nnoremap <Leader>ru :action RunClass<CR>
 "nnoremap <Leader>se :action ShowErrorDescription<CR>
 "nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
 "nnoremap <Leader>ne :action GotoNextError<CR>
 "nnoremap <Leader>pe :action GotoPreviousError<CR>
 "nnoremap <Leader>cf :action ReformatCode<CR>
-"nnoremap gt :action GotoTest<CR>
 
 "nnoremap <C-W>n :action ViewNavigationBar<CR>
 
