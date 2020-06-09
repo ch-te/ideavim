@@ -1,5 +1,5 @@
 # IdeaVim
-My IdeaVim dotfile, settings, and related links
+My IdeaVim dotfile, and related links
 
 # ideavim File
 [.ideavim](.ideavimrc)
@@ -9,6 +9,5 @@ My IdeaVim dotfile, settings, and related links
 * [Supported set commands](https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md#list-of-supported-set-commands)
 * [Supported commands](https://github.com/JetBrains/ideavim/blob/master/src/com/maddyhome/idea/vim/package-info.java)
 * [Changelog](https://github.com/JetBrains/ideavim/blob/master/CHANGES.md#the-changelog)
+* [Intellimacs](https://github.com/MarcoIeni/intellimacs)
 
-## IntelliJ Settings
-To be done..
