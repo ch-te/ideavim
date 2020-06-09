@@ -1,3 +1,18 @@
+"####
+source ~/.intellimacs/spacemacs.vim
+source ~/.intellimacs/extra.vim
+source ~/.intellimacs/major.vim
+
+"####
+let mapleader = " "
+set nu "rnu
+set clipboard=unnamedplus
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch "highlight halfway typing
+set clipboard+=ideaput
+
 " #### IdeaVim ####
 set ideajoin
 set idearefactormode=keep
@@ -12,25 +27,9 @@ set argtextobj
 set ReplaceWithRegister
 
 "" #### Maps Plugins #### "
+nmap s <Plug>(easymotion-s2)
+nmap S <Plug>(easymotion-sl2)
 "map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
-"map <Leader>w <Plug>(easymotion-bd-w)
-"map <Leader>W <Plug>(easymotion-bd-W)
-
-####
-let mapleader = " "
-set nu "rnu
-set clipboard=unnamedplus
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch "highlight halfway typing
-
-####
-source ~/.intellimacs/spacemacs.vim
-source ~/.intellimacs/extra.vim
-source ~/.intellimacs/major.vim
-
-set clipboard+=ideaput
 
 " #### Maps ####
 nnoremap Y yg_
@@ -82,6 +81,10 @@ nnoremap <leader>jd :action SelectInProjectView<CR>
 " File"
 nnoremap <leader>fo :action OpenFile<CR>
 vnoremap <leader>fo :action OpenFile<CR>
+
+" Buffer"
+nnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
+vnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 
 "..
 nnoremap gi :action GotoImplementation<CR>
@@ -154,6 +157,8 @@ set noerrorbells
 "map <Leader>pd :action PreviousDiff<CR>
 
 " ParameterInfo
+
+" include emacs hotkeys like C-a ?  some examples -> https://khin.io/post/spacemacs-like-binding-for-idea-products/"
 
 "<leader>mh...
 "TypeHierarchyBase.BaseOnThisType
