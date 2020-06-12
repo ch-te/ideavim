@@ -15,7 +15,7 @@ set incsearch "highlight halfway typing
 set clipboard+=ideaput
 
 " #### IdeaVim ####
-set idea
+set ideajoin
 set idearefactormode=keep
 
 " #### Idea Plugins ####"
