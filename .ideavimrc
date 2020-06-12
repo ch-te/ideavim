@@ -2,6 +2,7 @@
 source ~/.intellimacs/spacemacs.vim
 source ~/.intellimacs/extra.vim
 source ~/.intellimacs/major.vim
+source ~/.intellimacs/hybrid.vim
 
 "####
 let mapleader = " "
@@ -14,7 +15,7 @@ set incsearch "highlight halfway typing
 set clipboard+=ideaput
 
 " #### IdeaVim ####
-set ideajoin
+set idea
 set idearefactormode=keep
 
 " #### Idea Plugins ####"
@@ -25,6 +26,7 @@ set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 set textobj-entire
 set argtextobj
 set ReplaceWithRegister
+"set exchange
 
 "" #### Maps Plugins #### "
 nmap s <Plug>(easymotion-s2)
@@ -48,7 +50,7 @@ nnoremap dm [M+eV]Md
 nnoremap vm [M+eV]M
 
 
-" #### Replace Keymaps "
+" #### Replace Keymaps / shortcuts"
 nnoremap <C-,> :action ShowSettings<CR>
 
 nnoremap <C-,> :action ShowSettings<CR>
@@ -86,12 +88,14 @@ vnoremap <leader>fo :action OpenFile<CR>
 nnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 vnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 
-"..
+"goto..
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap <Leader>mgs :action GotoSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
 vnoremap gt :action GotoTest<CR>
+nnoremap gD :action FindUsages<CR>
+vnoremap gD :action FindUsages<CR>
 
 
 " Run"
@@ -147,6 +151,10 @@ nnoremap <leader>gl :action Vcs.Show.Log<CR>
 " debug"
 nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
 nnoremap <leader>mdi    :action StepInto<CR>
+nnoremap <leader>mdd    :action DebugClass<CR>
+vnoremap <leader>mdd    <Esc>:action DebugClass<CR>
+nnoremap <leader>mdl    :action Debug<CR>
+vnoremap <leader>mdl    <Esc>:action Debug<CR>
 
 " MISC"
 set visualbell
