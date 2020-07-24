@@ -99,12 +99,16 @@ vnoremap gD :action FindUsages<CR>
 
 
 " Run"
-nnoremap <Leader>Rr :action RunClass<CR>
-vnoremap <Leader>Rr :action RunClass<CR>
-nnoremap <Leader>Rl :action Rerun<CR>
-vnoremap <Leader>Rl :action Rerun<CR>
-nnoremap <Leader>Rc :action RunCoverage<CR>
-vnoremap <Leader>Rc :action RunCoverage<CR>
+nnoremap <Leader>rr :action RunClass<CR>
+vnoremap <Leader>rr :action RunClass<CR>
+nnoremap <Leader>rl :action Rerun<CR>
+vnoremap <Leader>rl :action Rerun<CR>
+nnoremap <Leader>rc :action RunCoverage<CR>
+vnoremap <Leader>rc :action RunCoverage<CR>
+nnoremap <leader>rk :action Stop<CR>
+vnoremap <leader>rk :action Stop<CR>
+nnoremap <leader>rs :action ChooseRunConfiguration<CR>
+vnoremap <leader>rs :action ChooseRunConfiguration<CR>
 
 " Insertions
 nnoremap <leader>is    :action InsertLiveTemplate<CR>a
