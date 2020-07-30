@@ -26,6 +26,7 @@ set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 set textobj-entire
 set argtextobj
 set ReplaceWithRegister
+set highlightedyank
 "set exchange
 
 "" #### Maps Plugins #### "
