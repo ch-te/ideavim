@@ -70,6 +70,8 @@ nnoremap <A-S-j> :action MoveStatementDown<CR>
 vnoremap <A-S-j> :action MoveStatementDown<CR>
 nnoremap <A-S-k> :action MoveStatementUp<CR>
 vnoremap <A-S-k> :action MoveStatementUp<CR>
+nnoremap <A-h> :action MoveElementLeft<CR>
+nnoremap <A-l> :action MoveElementRight<CR>
 
 
 " #### Maps Idea Actions ####
@@ -86,6 +88,8 @@ nnoremap <leader>fo :action OpenFile<CR>
 vnoremap <leader>fo :action OpenFile<CR>
 
 " Buffer"
+nnoremap <leader>bs :action NewScratchFile<CR>
+vnoremap <leader>bs :action NewScratchFile<CR>
 nnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 vnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 
@@ -101,15 +105,11 @@ vnoremap gD :action FindUsages<CR>
 
 " Run"
 nnoremap <Leader>rr :action RunClass<CR>
-vnoremap <Leader>rr :action RunClass<CR>
+nnoremap <Leader>ru :action RunClass<CR>
 nnoremap <Leader>rl :action Rerun<CR>
-vnoremap <Leader>rl :action Rerun<CR>
 nnoremap <Leader>rc :action RunCoverage<CR>
-vnoremap <Leader>rc :action RunCoverage<CR>
 nnoremap <leader>rk :action Stop<CR>
-vnoremap <leader>rk :action Stop<CR>
 nnoremap <leader>rs :action ChooseRunConfiguration<CR>
-vnoremap <leader>rs :action ChooseRunConfiguration<CR>
 
 " Insertions
 nnoremap <leader>is    :action InsertLiveTemplate<CR>a
@@ -152,14 +152,15 @@ nnoremap <leader>gf :action Git.Fetch<CR>
 nnoremap <leader>gF :action Vcs.UpdateProject<CR>
 nnoremap <leader>ga :action Annotate<CR>
 nnoremap <leader>gl :action Vcs.Show.Log<CR>
+unmap <leader>gs
+nnoremap <leader>gss :action Git.Stash<CR>
+nnoremap <leader>gsu :action Git.Unstash<CR>
 
 " debug"
 nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
 nnoremap <leader>mdi    :action StepInto<CR>
 nnoremap <leader>mdd    :action DebugClass<CR>
-vnoremap <leader>mdd    <Esc>:action DebugClass<CR>
 nnoremap <leader>mdl    :action Debug<CR>
-vnoremap <leader>mdl    <Esc>:action Debug<CR>
 
 " MISC"
 set visualbell
