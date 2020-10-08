@@ -27,7 +27,7 @@ set textobj-entire
 set argtextobj
 set ReplaceWithRegister
 set highlightedyank
-"set exchange
+set exchange
 
 "" #### Maps Plugins #### "
 nmap s <Plug>(easymotion-s2)
@@ -36,6 +36,7 @@ nmap S <Plug>(easymotion-sl2)
 
 " #### Maps ####
 nnoremap Y yg_
+nmap gR gr$
 nnoremap y_ y^
 nnoremap d_ d^
 nnoremap c_ c^
