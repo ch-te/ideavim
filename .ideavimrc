@@ -103,7 +103,6 @@ vnoremap gt :action GotoTest<CR>
 nnoremap gD :action FindUsages<CR>
 vnoremap gD :action FindUsages<CR>
 
-
 " Run"
 nnoremap <Leader>rr :action RunClass<CR>
 nnoremap <Leader>ru :action RunClass<CR>
@@ -162,6 +161,9 @@ nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
 nnoremap <leader>mdi    :action StepInto<CR>
 nnoremap <leader>mdd    :action DebugClass<CR>
 nnoremap <leader>mdl    :action Debug<CR>
+
+" Notifications
+nnoremap <leader>nc    :action CloseAllNotifications<CR>
 
 " MISC"
 set visualbell
