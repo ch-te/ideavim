@@ -1,12 +1,11 @@
 #+TITLE: My IdeaVim configuration.
 
-- Commented config: [[file:.ideavimrc][ideavim.org]]
-- Dotfile: [[file:.ideavimrc][.ideavim]]
+- [[file:ideavim.org][Commented config]]
+- [[file:.ideavimrc][Dotfile (.ideavim)]]
 
 * Links
-- [Github IdeaVim](https://github.com/JetBrains/ideavim#ideavim)
-- [Supported set commands](https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md#list-of-supported-set-commands)
-- [Supported commands](https://github.com/JetBrains/ideavim/blob/master/src/com/maddyhome/idea/vim/package-info.java)
-- [Changelog](https://github.com/JetBrains/ideavim/blob/master/CHANGES.md#the-changelog)
-- [Intellimacs](https://github.com/MarcoIeni/intellimacs)
-
+- [[https://github.com/JetBrains/ideavim#ideavim][Github IdeaVim]]
+- [[https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md#list-of-supported-set-commands][Supported set commands]]
+- [[https://github.com/JetBrains/ideavim/blob/master/src/com/maddyhome/idea/vim/package-info.java][Supported commands]]
+- [[https://github.com/JetBrains/ideavim/blob/master/CHANGES.md#the-changelog][Changelog]]
+- [[https://github.com/MarcoIeni/intellimacs][Intellimacs]]
