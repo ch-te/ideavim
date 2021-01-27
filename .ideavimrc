@@ -1,40 +1,24 @@
-"####
 source ~/.intellimacs/spacemacs.vim
 source ~/.intellimacs/extra.vim
 source ~/.intellimacs/major.vim
 source ~/.intellimacs/hybrid.vim
 
-"####
 let mapleader = " "
 set nu "rnu
 set clipboard=unnamedplus
 set ignorecase
 set smartcase
 set hlsearch
-set incsearch "highlight halfway typing
-set clipboard+=ideaput
+set incsearch ""highlight halfway typing
+set visualbell
+set noerrorbells
 
-" #### IdeaVim ####
-set ideajoin
-set idearefactormode=keep
+nnoremap ym [M+eV]My
+nnoremap dm [M+eV]Md
+nnoremap vm [M+eV]M
 
-" #### Idea Plugins ####"
-set surround
-set commentary
-set easymotion
-set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
-set textobj-entire
-set argtextobj
-set ReplaceWithRegister
-set highlightedyank
-set exchange
-
-"" #### Maps Plugins #### "
-nmap s <Plug>(easymotion-s2)
-nmap S <Plug>(easymotion-sl2)
-"map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
-
-" #### Maps ####
+nmap , <leader>m
+vmap , <leader>m
 nnoremap Y yg_
 nmap gR gr$
 nnoremap y_ y^
@@ -46,55 +30,42 @@ nnoremap <Leader>sr :%s///gcI<left><left><left><left><left>
 vnoremap sr y:%s///gcI<left><left><left><left><left><C-r>0<right>
 vnoremap ss y/<C-r>0<CR>
 
-"yank/delete/visual method
-nnoremap ym [M+eV]My
-nnoremap dm [M+eV]Md
-nnoremap vm [M+eV]M
+set surround
+set commentary
+set easymotion
+set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 
+set textobj-entire
+set argtextobj
+set ReplaceWithRegister
+set highlightedyank
+set exchange
 
-" #### Replace Keymaps / shortcuts"
-nnoremap <C-,> :action ShowSettings<CR>
+nmap s <Plug>(easymotion-s2)
+nmap S <Plug>(easymotion-sl2)
+"map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
 
-nnoremap <C-,> :action ShowSettings<CR>
-vnoremap <C-,> :action ShowSettings<CR>
-
-nnoremap <C-j> :action MethodDown<CR>
-vnoremap <C-j> :action MethodDown<CR>
-nnoremap <C-k> :action MethodUp<CR>
-vnoremap <C-k> :action MethodUp<CR>
-
-nnoremap <A-j> :action MoveLineDown<CR>
-vnoremap <A-j> :action MoveLineDown<CR>
-nnoremap <A-k> :action MoveLineUp<CR>
-vnoremap <A-k> :action MoveLineUp<CR>
-nnoremap <A-S-j> :action MoveStatementDown<CR>
-vnoremap <A-S-j> :action MoveStatementDown<CR>
-nnoremap <A-S-k> :action MoveStatementUp<CR>
-vnoremap <A-S-k> :action MoveStatementUp<CR>
-nnoremap <A-h> :action MoveElementLeft<CR>
-nnoremap <A-l> :action MoveElementRight<CR>
-
-
-" #### Maps Idea Actions ####
-nmap , <leader>m
-vmap , <leader>m
+set ideajoin
+set idearefactormode=keep
+set clipboard+=ideaput
 
 nnoremap <Leader><Leader> :action RecentFiles<CR>
 vnoremap <Leader><Leader> :action RecentFiles<CR>
 nnoremap <leader>* viw:action FindInPath<CR>
 nnoremap <leader>jd :action SelectInProjectView<CR>
+nnoremap <Leader>mm :action MainMenu<CR>
 
-" File"
 nnoremap <leader>fo :action OpenFile<CR>
 vnoremap <leader>fo :action OpenFile<CR>
 
-" Buffer"
 nnoremap <leader>bs :action NewScratchFile<CR>
 vnoremap <leader>bs :action NewScratchFile<CR>
 nnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 vnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 
-"goto..
+nnoremap <leader><enter> :action ShowBookmarks<CR>
+nnoremap <leader>bm :action ToggleBookmark<CR>
+
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap <Leader>mgs :action GotoSuperMethod<CR>
@@ -102,8 +73,9 @@ nnoremap gt :action GotoTest<CR>
 vnoremap gt :action GotoTest<CR>
 nnoremap gD :action FindUsages<CR>
 vnoremap gD :action FindUsages<CR>
+nnoremap g=    <C-a>
+nnoremap g-    <C-x>
 
-" Run"
 nnoremap <Leader>rr :action RunClass<CR>
 nnoremap <Leader>ru :action RunClass<CR>
 nnoremap <Leader>rl :action Rerun<CR>
@@ -111,12 +83,9 @@ nnoremap <Leader>rc :action RunCoverage<CR>
 nnoremap <leader>rk :action Stop<CR>
 nnoremap <leader>rs :action ChooseRunConfiguration<CR>
 
-" Insertions
 nnoremap <leader>is    :action InsertLiveTemplate<CR>a
 vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 
-""Refactor
-" SPC m r"
 "noremap <Leader>in :action Inline<CR>
 nnoremap <leader>mrin    :action Inline<CR>
 vnoremap <leader>mrin    <Esc>:action Inline<CR>
@@ -139,13 +108,10 @@ vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
 
 "noremap <Leader>em :action ExtractMethod<CR>
 
-"Database
 nnoremap <Leader>dd :action ActivateDatabaseToolWindow<CR>
 
-" Gradle"
 nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 
-"" git/versions control
 nnoremap <Leader>gg :action ActivateCommitToolWindow<CR>
 nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
 nnoremap <leader>gf :action Git.Fetch<CR>
@@ -156,20 +122,26 @@ unmap <leader>gs
 nnoremap <leader>gss :action Git.Stash<CR>
 nnoremap <leader>gsu :action Git.Unstash<CR>
 
-" debug"
 nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
 nnoremap <leader>mdi    :action StepInto<CR>
 nnoremap <leader>mdd    :action DebugClass<CR>
 nnoremap <leader>mdl    :action Debug<CR>
 
-" Notifications
 nnoremap <leader>nc    :action CloseAllNotifications<CR>
 
-" MISC"
-set visualbell
-set noerrorbells
+nnoremap <C-,> :action ShowSettings<CR>
 
-" #### TODO ####
+nnoremap <C-j> :action MethodDown<CR>
+nnoremap <C-k> :action MethodUp<CR>
+nnoremap <A-j> :action MoveLineDown<CR>
+nnoremap <A-k> :action MoveLineUp<CR>
+
+nnoremap <A-S-j> :action MoveStatementDown<CR>
+nnoremap <A-S-k> :action MoveStatementUp<CR>
+
+nnoremap <A-h> :action MoveElementLeft<CR>
+nnoremap <A-l> :action MoveElementRight<CR>
+
 "map <Leader>nd :action NextDiff<CR>
 "map <Leader>pd :action PreviousDiff<CR>
 
@@ -185,14 +157,13 @@ set noerrorbells
 
 "better vim camel case ]b ]w [b [w (SPC x i)
 
-nnoremap <Leader>mm :action MainMenu<CR>
 
 " sourround/insert with livetemplate
 
 " jumb to next "Element". Example-> return findReference(seaShip, this::isKnExportReference, KnExportReference::knExportReference);
 " C-S-h/l change method private -> public -> ...
 " C-S-j/k change variable/method final/..(?)
-* change C-A j/k to A j/k
+" change C-A j/k to A j/k
 " correct copy, yank, delte methode"
 
 " vim smooth scorlling"
@@ -232,4 +203,3 @@ nnoremap <Leader>mm :action MainMenu<CR>
 "vnoremap aa :action GuiDesigner.ExpandSelection<CR>
 "vnoremap ab :action SmartSelect<CR>
 "vnoremap ac :action TableResult.GrowSelection<CR>
-
