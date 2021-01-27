@@ -1,22 +1,55 @@
 #+TITLE: IntelliJ's IdeaVim Configuration
-#+description: test123
-#+property: header-args:emacs-lisp :tangle config.el
-#+property: header-args :mkdirp yes :comments no
+#+property: header-args:bash :tangle .ideavimrc
 #+startup: fold
-# overview
 The configuration is saved in the dotfile .ideavimrc.
 This Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs][Intellimacs]], which base on the [[https://github.com/syl20bnr/spacemacs][Spacemacs]]. My own Keybindings are inspired by [[https://github.com/hlissner/doom-emacs#doom-emacs][Doom Emacs]]
+
+* Table of Contents :TOC_3:noexport:
+- [[#default][Default]]
+  - [[#import-intellijmacs][Import Intellijmacs]]
+  - [[#settings][Settings]]
+  - [[#keymappings][Keymappings]]
+    - [[#method-motions-and-operators][Method motions and operators]]
+    - [[#misc][Misc]]
+- [[#plugins][Plugins]]
+  - [[#load][Load]]
+  - [[#settings-1][Settings]]
+  - [[#keymappings-1][Keymappings]]
+- [[#ideavim][IdeaVim]]
+  - [[#settings-2][Settings]]
+  - [[#keymappings-2][Keymappings]]
+    - [[#file][File]]
+    - [[#buffer][Buffer]]
+    - [[#bookmark][Bookmark]]
+    - [[#goto][Goto]]
+    - [[#run][Run]]
+    - [[#insertions][Insertions]]
+    - [[#refactor][Refactor]]
+    - [[#database][Database]]
+    - [[#gradle][Gradle]]
+    - [[#gitversions-control][Git/Versions control]]
+    - [[#debug][Debug]]
+    - [[#notifications][Notifications]]
+    - [[#replace-hotkeysshortcuts][Replace hotkeys/shortcuts]]
+    - [[#misc--todo][Misc / Todo]]
+- [[#usefull-links][Usefull Links]]
+  - [[#ideavim-1][IdeaVim]]
+  - [[#list-of-supported-set-commands][List of Supported Set Commands]]
+  - [[#list-of-supported-motions-and-operations][List of Supported motions and operations]]
+  - [[#ideavim-changelog][IdeaVim Changelog]]
+  - [[#intellimacs][Intellimacs]]
+
 * Default
 ** Import Intellijmacs
 First, so it can be overwritten
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 source ~/.intellimacs/spacemacs.vim
 source ~/.intellimacs/extra.vim
 source ~/.intellimacs/major.vim
 source ~/.intellimacs/hybrid.vim
 #+end_src
 ** Settings
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 let mapleader = " "
 set nu "rnu
 set clipboard=unnamedplus
@@ -29,13 +62,13 @@ set noerrorbells
 #+end_src
 ** Keymappings
 *** Method motions and operators
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap ym [M+eV]My
 nnoremap dm [M+eV]Md
 nnoremap vm [M+eV]M
 #+end_src
 *** Misc
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nmap , <leader>m
 vmap , <leader>m
 nnoremap Y yg_
@@ -51,14 +84,14 @@ vnoremap ss y/<C-r>0<CR>
 #+end_src
 * Plugins
 ** Load
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 set surround
 set commentary
 set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 #+end_src
 ** Settings
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 set textobj-entire
 set argtextobj
 set ReplaceWithRegister
@@ -66,20 +99,20 @@ set highlightedyank
 set exchange
 #+end_src
 ** Keymappings
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nmap s <Plug>(easymotion-s2)
 nmap S <Plug>(easymotion-sl2)
 "map <Leader> <Plug>(easymotion-prefix) "-> only one <Leader>, instead of <Leader><Leader>
 #+end_src
 * IdeaVim
 ** Settings
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 set ideajoin
 set idearefactormode=keep
 set clipboard+=ideaput
 #+end_src
 ** Keymappings
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <Leader><Leader> :action RecentFiles<CR>
 vnoremap <Leader><Leader> :action RecentFiles<CR>
 nnoremap <leader>* viw:action FindInPath<CR>
@@ -87,24 +120,24 @@ nnoremap <leader>jd :action SelectInProjectView<CR>
 nnoremap <Leader>mm :action MainMenu<CR>
 #+end_src
 *** File
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <leader>fo :action OpenFile<CR>
 vnoremap <leader>fo :action OpenFile<CR>
 #+end_src
 *** Buffer
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <leader>bs :action NewScratchFile<CR>
 vnoremap <leader>bs :action NewScratchFile<CR>
 nnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 vnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 #+end_src
 *** Bookmark
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <leader><enter> :action ShowBookmarks<CR>
 nnoremap <leader>bm :action ToggleBookmark<CR>
 #+end_src
 *** Goto
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap <Leader>mgs :action GotoSuperMethod<CR>
@@ -116,7 +149,7 @@ nnoremap g=    <C-a>
 nnoremap g-    <C-x>
 #+end_src
 *** Run
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <Leader>rr :action RunClass<CR>
 nnoremap <Leader>ru :action RunClass<CR>
 nnoremap <Leader>rl :action Rerun<CR>
@@ -125,12 +158,12 @@ nnoremap <leader>rk :action Stop<CR>
 nnoremap <leader>rs :action ChooseRunConfiguration<CR>
 #+end_src
 *** Insertions
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <leader>is    :action InsertLiveTemplate<CR>a
 vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 #+end_src
 *** Refactor
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 "noremap <Leader>in :action Inline<CR>
 nnoremap <leader>mrin    :action Inline<CR>
 vnoremap <leader>mrin    <Esc>:action Inline<CR>
@@ -154,15 +187,15 @@ vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
 "noremap <Leader>em :action ExtractMethod<CR>
 #+end_src
 *** Database
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <Leader>dd :action ActivateDatabaseToolWindow<CR>
 #+end_src
 *** Gradle
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 #+end_src
 *** Git/Versions control
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <Leader>gg :action ActivateCommitToolWindow<CR>
 nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
 nnoremap <leader>gf :action Git.Fetch<CR>
@@ -174,18 +207,18 @@ nnoremap <leader>gss :action Git.Stash<CR>
 nnoremap <leader>gsu :action Git.Unstash<CR>
 #+end_src
 *** Debug
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
 nnoremap <leader>mdi    :action StepInto<CR>
 nnoremap <leader>mdd    :action DebugClass<CR>
 nnoremap <leader>mdl    :action Debug<CR>
 #+end_src
 *** Notifications
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <leader>nc    :action CloseAllNotifications<CR>
 #+end_src
 *** Replace hotkeys/shortcuts
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 nnoremap <C-,> :action ShowSettings<CR>
 
 nnoremap <C-j> :action MethodDown<CR>
@@ -200,7 +233,7 @@ nnoremap <A-h> :action MoveElementLeft<CR>
 nnoremap <A-l> :action MoveElementRight<CR>
 #+end_src
 *** Misc / Todo
-#+begin_src bash :tangle ~/.ideavimrc
+#+begin_src bash
 "map <Leader>nd :action NextDiff<CR>
 "map <Leader>pd :action PreviousDiff<CR>
 
