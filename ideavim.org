@@ -18,20 +18,20 @@ This Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs]
 - [[#ideavim][IdeaVim]]
   - [[#settings-2][Settings]]
   - [[#keymappings-2][Keymappings]]
-    - [[#file][File]]
-    - [[#buffer][Buffer]]
     - [[#bookmark][Bookmark]]
-    - [[#goto][Goto]]
-    - [[#run][Run]]
-    - [[#insertions][Insertions]]
-    - [[#refactor][Refactor]]
+    - [[#buffer][Buffer]]
     - [[#database][Database]]
-    - [[#gradle][Gradle]]
-    - [[#gitversions-control][Git/Versions control]]
     - [[#debug][Debug]]
-    - [[#notifications][Notifications]]
-    - [[#replace-hotkeysshortcuts][Replace hotkeys/shortcuts]]
+    - [[#file][File]]
+    - [[#gitversions-control][Git/Versions control]]
+    - [[#goto][Goto]]
+    - [[#gradle][Gradle]]
+    - [[#insertions][Insertions]]
     - [[#misc--todo][Misc / Todo]]
+    - [[#notifications][Notifications]]
+    - [[#refactor][Refactor]]
+    - [[#replace-hotkeysshortcuts][Replace hotkeys/shortcuts]]
+    - [[#run][Run]]
 - [[#usefull-links][Usefull Links]]
 
 * Default
@@ -130,10 +130,10 @@ Select current File in Project View
 #+begin_src bash
 nnoremap <leader>jd :action SelectInProjectView<CR>
 #+end_src
-*** File
+*** Bookmark
 #+begin_src bash
-nnoremap <leader>fo :action OpenFile<CR>
-vnoremap <leader>fo :action OpenFile<CR>
+nnoremap <leader><enter> :action ShowBookmarks<CR>
+nnoremap <leader>bm :action ToggleBookmark<CR>
 #+end_src
 *** Buffer
 
@@ -152,68 +152,21 @@ vnoremap <leader>bs :action NewScratchFile<CR>
 nnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 vnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 #+end_src
-*** Bookmark
-#+begin_src bash
-nnoremap <leader><enter> :action ShowBookmarks<CR>
-nnoremap <leader>bm :action ToggleBookmark<CR>
-#+end_src
-*** Goto
-#+begin_src bash
-nnoremap gi :action GotoImplementation<CR>
-nnoremap gs :action GotoSuperMethod<CR>
-nnoremap <Leader>mgs :action GotoSuperMethod<CR>
-nnoremap gt :action GotoTest<CR>
-vnoremap gt :action GotoTest<CR>
-nnoremap gD :action FindUsages<CR>
-vnoremap gD :action FindUsages<CR>
-nnoremap g=    <C-a>
-nnoremap g-    <C-x>
-#+end_src
-*** Run
-#+begin_src bash
-nnoremap <Leader>rr :action RunClass<CR>
-nnoremap <Leader>ru :action RunClass<CR>
-nnoremap <Leader>rl :action Rerun<CR>
-nnoremap <Leader>rc :action RunCoverage<CR>
-nnoremap <leader>rk :action Stop<CR>
-nnoremap <leader>rs :action ChooseRunConfiguration<CR>
-#+end_src
-*** Insertions
-#+begin_src bash
-nnoremap <leader>is    :action InsertLiveTemplate<CR>a
-vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
-#+end_src
-*** Refactor
-#+begin_src bash
-"noremap <Leader>in :action Inline<CR>
-nnoremap <leader>mrin    :action Inline<CR>
-vnoremap <leader>mrin    <Esc>:action Inline<CR>
-
-"noremap <Leader>ev :action IntroduceVariable<CR>
-nnoremap <leader>mrev    :action IntroduceVariable<CR>
-vnoremap <leader>mrev    <Esc>:action IntroduceVariable<CR>
-
-"noremap <Leader>ep :action IntroduceParameter<CR>
-nnoremap <leader>mrep    :action IntroduceParameter<CR>
-vnoremap <leader>mrep    <Esc>:action IntroduceParameter<CR>
-
-"noremap <Leader>ec :action IntroduceConstant<CR>
-nnoremap <leader>mrec    :action IntroduceConstant<CR>
-vnoremap <leader>mrec    <Esc>:action IntroduceConstant<CR>
-
-"noremap <Leader>ef :action IntroduceField<CR>
-nnoremap <leader>mref    :action IntroduceField<CR>
-vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
-
-"noremap <Leader>em :action ExtractMethod<CR>
-#+end_src
 *** Database
 #+begin_src bash
 nnoremap <Leader>dd :action ActivateDatabaseToolWindow<CR>
 #+end_src
-*** Gradle
+*** Debug
 #+begin_src bash
-nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
+nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
+nnoremap <leader>mdi    :action StepInto<CR>
+nnoremap <leader>mdd    :action DebugClass<CR>
+nnoremap <leader>mdl    :action Debug<CR>
+#+end_src
+*** File
+#+begin_src bash
+nnoremap <leader>fo :action OpenFile<CR>
+vnoremap <leader>fo :action OpenFile<CR>
 #+end_src
 *** Git/Versions control
 #+begin_src bash
@@ -227,31 +180,26 @@ unmap <leader>gs
 nnoremap <leader>gss :action Git.Stash<CR>
 nnoremap <leader>gsu :action Git.Unstash<CR>
 #+end_src
-*** Debug
+*** Goto
 #+begin_src bash
-nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
-nnoremap <leader>mdi    :action StepInto<CR>
-nnoremap <leader>mdd    :action DebugClass<CR>
-nnoremap <leader>mdl    :action Debug<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap <Leader>mgs :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+vnoremap gt :action GotoTest<CR>
+nnoremap gD :action FindUsages<CR>
+vnoremap gD :action FindUsages<CR>
+nnoremap g=    <C-a>
+nnoremap g-    <C-x>
 #+end_src
-*** Notifications
+*** Gradle
 #+begin_src bash
-nnoremap <leader>nc    :action CloseAllNotifications<CR>
+nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 #+end_src
-*** Replace hotkeys/shortcuts
+*** Insertions
 #+begin_src bash
-nnoremap <C-,> :action ShowSettings<CR>
-
-nnoremap <C-j> :action MethodDown<CR>
-nnoremap <C-k> :action MethodUp<CR>
-nnoremap <A-j> :action MoveLineDown<CR>
-nnoremap <A-k> :action MoveLineUp<CR>
-
-nnoremap <A-S-j> :action MoveStatementDown<CR>
-nnoremap <A-S-k> :action MoveStatementUp<CR>
-
-nnoremap <A-h> :action MoveElementLeft<CR>
-nnoremap <A-l> :action MoveElementRight<CR>
+nnoremap <leader>is    :action InsertLiveTemplate<CR>a
+vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 #+end_src
 *** Misc / Todo
 #+begin_src bash
@@ -316,6 +264,58 @@ nnoremap <A-l> :action MoveElementRight<CR>
 "vnoremap aa :action GuiDesigner.ExpandSelection<CR>
 "vnoremap ab :action SmartSelect<CR>
 "vnoremap ac :action TableResult.GrowSelection<CR>
+#+end_src
+*** Notifications
+#+begin_src bash
+nnoremap <leader>nc    :action CloseAllNotifications<CR>
+#+end_src
+*** Refactor
+#+begin_src bash
+"noremap <Leader>in :action Inline<CR>
+nnoremap <leader>mrin    :action Inline<CR>
+vnoremap <leader>mrin    <Esc>:action Inline<CR>
+
+"noremap <Leader>ev :action IntroduceVariable<CR>
+nnoremap <leader>mrev    :action IntroduceVariable<CR>
+vnoremap <leader>mrev    <Esc>:action IntroduceVariable<CR>
+
+"noremap <Leader>ep :action IntroduceParameter<CR>
+nnoremap <leader>mrep    :action IntroduceParameter<CR>
+vnoremap <leader>mrep    <Esc>:action IntroduceParameter<CR>
+
+"noremap <Leader>ec :action IntroduceConstant<CR>
+nnoremap <leader>mrec    :action IntroduceConstant<CR>
+vnoremap <leader>mrec    <Esc>:action IntroduceConstant<CR>
+
+"noremap <Leader>ef :action IntroduceField<CR>
+nnoremap <leader>mref    :action IntroduceField<CR>
+vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
+
+"noremap <Leader>em :action ExtractMethod<CR>
+#+end_src
+*** Replace hotkeys/shortcuts
+#+begin_src bash
+nnoremap <C-,> :action ShowSettings<CR>
+
+nnoremap <C-j> :action MethodDown<CR>
+nnoremap <C-k> :action MethodUp<CR>
+nnoremap <A-j> :action MoveLineDown<CR>
+nnoremap <A-k> :action MoveLineUp<CR>
+
+nnoremap <A-S-j> :action MoveStatementDown<CR>
+nnoremap <A-S-k> :action MoveStatementUp<CR>
+
+nnoremap <A-h> :action MoveElementLeft<CR>
+nnoremap <A-l> :action MoveElementRight<CR>
+#+end_src
+*** Run
+#+begin_src bash
+nnoremap <Leader>rr :action RunClass<CR>
+nnoremap <Leader>ru :action RunClass<CR>
+nnoremap <Leader>rl :action Rerun<CR>
+nnoremap <Leader>rc :action RunCoverage<CR>
+nnoremap <leader>rk :action Stop<CR>
+nnoremap <leader>rs :action ChooseRunConfiguration<CR>
 #+end_src
 * Usefull Links
 - [[https://github.com/JetBrains/ideavim#ideavim][IdeaVim]]

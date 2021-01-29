@@ -57,8 +57,8 @@ nnoremap <leader>hrr    :source ~/.ideavimrc<CR>
 
 nnoremap <leader>jd :action SelectInProjectView<CR>
 
-nnoremap <leader>fo :action OpenFile<CR>
-vnoremap <leader>fo :action OpenFile<CR>
+nnoremap <leader><enter> :action ShowBookmarks<CR>
+nnoremap <leader>bm :action ToggleBookmark<CR>
 
 nnoremap <Leader><Leader> :action RecentFiles<CR>
 vnoremap <Leader><Leader> :action RecentFiles<CR>
@@ -70,54 +70,15 @@ vnoremap <leader>bs :action NewScratchFile<CR>
 nnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 vnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 
-nnoremap <leader><enter> :action ShowBookmarks<CR>
-nnoremap <leader>bm :action ToggleBookmark<CR>
-
-nnoremap gi :action GotoImplementation<CR>
-nnoremap gs :action GotoSuperMethod<CR>
-nnoremap <Leader>mgs :action GotoSuperMethod<CR>
-nnoremap gt :action GotoTest<CR>
-vnoremap gt :action GotoTest<CR>
-nnoremap gD :action FindUsages<CR>
-vnoremap gD :action FindUsages<CR>
-nnoremap g=    <C-a>
-nnoremap g-    <C-x>
-
-nnoremap <Leader>rr :action RunClass<CR>
-nnoremap <Leader>ru :action RunClass<CR>
-nnoremap <Leader>rl :action Rerun<CR>
-nnoremap <Leader>rc :action RunCoverage<CR>
-nnoremap <leader>rk :action Stop<CR>
-nnoremap <leader>rs :action ChooseRunConfiguration<CR>
-
-nnoremap <leader>is    :action InsertLiveTemplate<CR>a
-vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
-
-"noremap <Leader>in :action Inline<CR>
-nnoremap <leader>mrin    :action Inline<CR>
-vnoremap <leader>mrin    <Esc>:action Inline<CR>
-
-"noremap <Leader>ev :action IntroduceVariable<CR>
-nnoremap <leader>mrev    :action IntroduceVariable<CR>
-vnoremap <leader>mrev    <Esc>:action IntroduceVariable<CR>
-
-"noremap <Leader>ep :action IntroduceParameter<CR>
-nnoremap <leader>mrep    :action IntroduceParameter<CR>
-vnoremap <leader>mrep    <Esc>:action IntroduceParameter<CR>
-
-"noremap <Leader>ec :action IntroduceConstant<CR>
-nnoremap <leader>mrec    :action IntroduceConstant<CR>
-vnoremap <leader>mrec    <Esc>:action IntroduceConstant<CR>
-
-"noremap <Leader>ef :action IntroduceField<CR>
-nnoremap <leader>mref    :action IntroduceField<CR>
-vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
-
-"noremap <Leader>em :action ExtractMethod<CR>
-
 nnoremap <Leader>dd :action ActivateDatabaseToolWindow<CR>
 
-nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
+nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
+nnoremap <leader>mdi    :action StepInto<CR>
+nnoremap <leader>mdd    :action DebugClass<CR>
+nnoremap <leader>mdl    :action Debug<CR>
+
+nnoremap <leader>fo :action OpenFile<CR>
+vnoremap <leader>fo :action OpenFile<CR>
 
 nnoremap <Leader>gg :action ActivateCommitToolWindow<CR>
 nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
@@ -129,25 +90,20 @@ unmap <leader>gs
 nnoremap <leader>gss :action Git.Stash<CR>
 nnoremap <leader>gsu :action Git.Unstash<CR>
 
-nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
-nnoremap <leader>mdi    :action StepInto<CR>
-nnoremap <leader>mdd    :action DebugClass<CR>
-nnoremap <leader>mdl    :action Debug<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap <Leader>mgs :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+vnoremap gt :action GotoTest<CR>
+nnoremap gD :action FindUsages<CR>
+vnoremap gD :action FindUsages<CR>
+nnoremap g=    <C-a>
+nnoremap g-    <C-x>
 
-nnoremap <leader>nc    :action CloseAllNotifications<CR>
+nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 
-nnoremap <C-,> :action ShowSettings<CR>
-
-nnoremap <C-j> :action MethodDown<CR>
-nnoremap <C-k> :action MethodUp<CR>
-nnoremap <A-j> :action MoveLineDown<CR>
-nnoremap <A-k> :action MoveLineUp<CR>
-
-nnoremap <A-S-j> :action MoveStatementDown<CR>
-nnoremap <A-S-k> :action MoveStatementUp<CR>
-
-nnoremap <A-h> :action MoveElementLeft<CR>
-nnoremap <A-l> :action MoveElementRight<CR>
+nnoremap <leader>is    :action InsertLiveTemplate<CR>a
+vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 
 "map <Leader>nd :action NextDiff<CR>
 "map <Leader>pd :action PreviousDiff<CR>
@@ -210,3 +166,47 @@ nnoremap <A-l> :action MoveElementRight<CR>
 "vnoremap aa :action GuiDesigner.ExpandSelection<CR>
 "vnoremap ab :action SmartSelect<CR>
 "vnoremap ac :action TableResult.GrowSelection<CR>
+
+nnoremap <leader>nc    :action CloseAllNotifications<CR>
+
+"noremap <Leader>in :action Inline<CR>
+nnoremap <leader>mrin    :action Inline<CR>
+vnoremap <leader>mrin    <Esc>:action Inline<CR>
+
+"noremap <Leader>ev :action IntroduceVariable<CR>
+nnoremap <leader>mrev    :action IntroduceVariable<CR>
+vnoremap <leader>mrev    <Esc>:action IntroduceVariable<CR>
+
+"noremap <Leader>ep :action IntroduceParameter<CR>
+nnoremap <leader>mrep    :action IntroduceParameter<CR>
+vnoremap <leader>mrep    <Esc>:action IntroduceParameter<CR>
+
+"noremap <Leader>ec :action IntroduceConstant<CR>
+nnoremap <leader>mrec    :action IntroduceConstant<CR>
+vnoremap <leader>mrec    <Esc>:action IntroduceConstant<CR>
+
+"noremap <Leader>ef :action IntroduceField<CR>
+nnoremap <leader>mref    :action IntroduceField<CR>
+vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
+
+"noremap <Leader>em :action ExtractMethod<CR>
+
+nnoremap <C-,> :action ShowSettings<CR>
+
+nnoremap <C-j> :action MethodDown<CR>
+nnoremap <C-k> :action MethodUp<CR>
+nnoremap <A-j> :action MoveLineDown<CR>
+nnoremap <A-k> :action MoveLineUp<CR>
+
+nnoremap <A-S-j> :action MoveStatementDown<CR>
+nnoremap <A-S-k> :action MoveStatementUp<CR>
+
+nnoremap <A-h> :action MoveElementLeft<CR>
+nnoremap <A-l> :action MoveElementRight<CR>
+
+nnoremap <Leader>rr :action RunClass<CR>
+nnoremap <Leader>ru :action RunClass<CR>
+nnoremap <Leader>rl :action Rerun<CR>
+nnoremap <Leader>rc :action RunCoverage<CR>
+nnoremap <leader>rk :action Stop<CR>
+nnoremap <leader>rs :action ChooseRunConfiguration<CR>
