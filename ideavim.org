@@ -33,11 +33,6 @@ This Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs]
     - [[#replace-hotkeysshortcuts][Replace hotkeys/shortcuts]]
     - [[#misc--todo][Misc / Todo]]
 - [[#usefull-links][Usefull Links]]
-  - [[#ideavim-1][IdeaVim]]
-  - [[#list-of-supported-set-commands][List of Supported Set Commands]]
-  - [[#list-of-supported-motions-and-operations][List of Supported motions and operations]]
-  - [[#ideavim-changelog][IdeaVim Changelog]]
-  - [[#intellimacs][Intellimacs]]
 
 * Default
 ** Import Intellijmacs
@@ -112,12 +107,28 @@ set idearefactormode=keep
 set clipboard+=ideaput
 #+end_src
 ** Keymappings
+
+Show Main Menu
+
 #+begin_src bash
-nnoremap <Leader><Leader> :action RecentFiles<CR>
-vnoremap <Leader><Leader> :action RecentFiles<CR>
-nnoremap <leader>* viw:action FindInPath<CR>
-nnoremap <leader>jd :action SelectInProjectView<CR>
 nnoremap <Leader>mm :action MainMenu<CR>
+#+end_src
+
+Searches word under curser in all Files |  "Search current project for symbol at point"
+
+#+begin_src bash
+nnoremap <leader>* viw:action FindInPath<CR>
+#+end_src
+Reload .ideavimrc File
+
+#+begin_src bash
+nnoremap <leader>hrr    :source ~/.ideavimrc<CR>
+#+end_src
+
+Select current File in Project View
+
+#+begin_src bash
+nnoremap <leader>jd :action SelectInProjectView<CR>
 #+end_src
 *** File
 #+begin_src bash
@@ -125,6 +136,16 @@ nnoremap <leader>fo :action OpenFile<CR>
 vnoremap <leader>fo :action OpenFile<CR>
 #+end_src
 *** Buffer
+
+Show recent Files | "Switch Workspace Buffer"
+
+#+begin_src bash
+nnoremap <Leader><Leader> :action RecentFiles<CR>
+vnoremap <Leader><Leader> :action RecentFiles<CR>
+nnoremap <Leader>, :action RecentFiles<CR>
+vnoremap <Leader>, :action RecentFiles<CR>
+#+end_src
+
 #+begin_src bash
 nnoremap <leader>bs :action NewScratchFile<CR>
 vnoremap <leader>bs :action NewScratchFile<CR>
@@ -297,8 +318,8 @@ nnoremap <A-l> :action MoveElementRight<CR>
 "vnoremap ac :action TableResult.GrowSelection<CR>
 #+end_src
 * Usefull Links
-** [[https://github.com/JetBrains/ideavim#ideavim][IdeaVim]]
-** [[https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md#list-of-supported-set-commands][List of Supported Set Commands]]
-** [[https://github.com/JetBrains/ideavim/blob/master/src/com/maddyhome/idea/vim/package-info.java][List of Supported motions and operations]]
-** [[https://github.com/JetBrains/ideavim/blob/master/CHANGES.md#the-changelog][IdeaVim Changelog]]
-** [[https://github.com/MarcoIeni/intellimacs][Intellimacs]]
+- [[https://github.com/JetBrains/ideavim#ideavim][IdeaVim]]
+- [[https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md#list-of-supported-set-commands][List of Supported Set Commands]]
+- [[https://github.com/JetBrains/ideavim/blob/master/src/com/maddyhome/idea/vim/package-info.java][List of Supported motions and operations]]
+- [[https://github.com/JetBrains/ideavim/blob/master/CHANGES.md#the-changelog][IdeaVim Changelog]]
+- [[https://github.com/MarcoIeni/intellimacs][Intellimacs]]

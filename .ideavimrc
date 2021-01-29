@@ -49,14 +49,21 @@ set ideajoin
 set idearefactormode=keep
 set clipboard+=ideaput
 
-nnoremap <Leader><Leader> :action RecentFiles<CR>
-vnoremap <Leader><Leader> :action RecentFiles<CR>
-nnoremap <leader>* viw:action FindInPath<CR>
-nnoremap <leader>jd :action SelectInProjectView<CR>
 nnoremap <Leader>mm :action MainMenu<CR>
+
+nnoremap <leader>* viw:action FindInPath<CR>
+
+nnoremap <leader>hrr    :source ~/.ideavimrc<CR>
+
+nnoremap <leader>jd :action SelectInProjectView<CR>
 
 nnoremap <leader>fo :action OpenFile<CR>
 vnoremap <leader>fo :action OpenFile<CR>
+
+nnoremap <Leader><Leader> :action RecentFiles<CR>
+vnoremap <Leader><Leader> :action RecentFiles<CR>
+nnoremap <Leader>, :action RecentFiles<CR>
+vnoremap <Leader>, :action RecentFiles<CR>
 
 nnoremap <leader>bs :action NewScratchFile<CR>
 vnoremap <leader>bs :action NewScratchFile<CR>
