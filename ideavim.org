@@ -20,6 +20,7 @@ This Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs]
   - [[#keymappings-2][Keymappings]]
     - [[#bookmark][Bookmark]]
     - [[#buffer][Buffer]]
+    - [[#code][Code]]
     - [[#database][Database]]
     - [[#debug][Debug]]
     - [[#file][File]]
@@ -152,6 +153,20 @@ vnoremap <leader>bs :action NewScratchFile<CR>
 nnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 vnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 #+end_src
+*** Code
+
+Format Buffer/Region
+
+#+begin_src bash
+nnoremap <leader>cf :action ReformatCode<CR>
+#+end_src
+
+Optimize/Organize Imports
+
+#+begin_src bash
+nnoremap <leader>co :action OptimizeImports<CR>
+#+end_src
+
 *** Database
 #+begin_src bash
 nnoremap <Leader>dd :action ActivateDatabaseToolWindow<CR>
@@ -238,7 +253,6 @@ vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 "nnoremap <Leader>sb :action ToggleLineBreakpoint<CR>
 "nnoremap <Leader>ne :action GotoNextError<CR>
 "nnoremap <Leader>pe :action GotoPreviousError<CR>
-"nnoremap <Leader>cf :action ReformatCode<CR>
 
 "nnoremap <C-W>n :action ViewNavigationBar<CR>
 
