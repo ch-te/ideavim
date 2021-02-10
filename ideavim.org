@@ -194,6 +194,7 @@ nnoremap <leader>gl :action Vcs.Show.Log<CR>
 unmap <leader>gs
 nnoremap <leader>gss :action Git.Stash<CR>
 nnoremap <leader>gsu :action Git.Unstash<CR>
+nnoremap <leader>gr :action Git.Unstash<CR>
 #+end_src
 *** Goto
 #+begin_src bash
