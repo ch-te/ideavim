@@ -120,6 +120,7 @@ Searches word under curser in all Files |  "Search current project for symbol at
 #+begin_src bash
 nnoremap <leader>* viw:action FindInPath<CR>
 #+end_src
+
 Reload .ideavimrc File
 
 #+begin_src bash
@@ -219,8 +220,6 @@ vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 #+end_src
 *** Misc / Todo
 #+begin_src bash
-"map <Leader>nd :action NextDiff<CR>
-"map <Leader>pd :action PreviousDiff<CR>
 
 " ParameterInfo
 
@@ -322,6 +321,10 @@ nnoremap <A-S-k> :action MoveStatementUp<CR>
 
 nnoremap <A-h> :action MoveElementLeft<CR>
 nnoremap <A-l> :action MoveElementRight<CR>
+
+" Not working :-(
+"nnoremap <C-n> :action NextDiff<CR>
+"nnoremap <C-p> :action PreviousDiff<CR>
 #+end_src
 *** Run
 #+begin_src bash

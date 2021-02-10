@@ -93,6 +93,7 @@ nnoremap <leader>gl :action Vcs.Show.Log<CR>
 unmap <leader>gs
 nnoremap <leader>gss :action Git.Stash<CR>
 nnoremap <leader>gsu :action Git.Unstash<CR>
+nnoremap <leader>gr :action Git.Unstash<CR>
 
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
@@ -108,9 +109,6 @@ nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 
 nnoremap <leader>is    :action InsertLiveTemplate<CR>a
 vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
-
-"map <Leader>nd :action NextDiff<CR>
-"map <Leader>pd :action PreviousDiff<CR>
 
 " ParameterInfo
 
@@ -206,6 +204,10 @@ nnoremap <A-S-k> :action MoveStatementUp<CR>
 
 nnoremap <A-h> :action MoveElementLeft<CR>
 nnoremap <A-l> :action MoveElementRight<CR>
+
+" Not working :-(
+"nnoremap <C-n> :action NextDiff<CR>
+"nnoremap <C-p> :action PreviousDiff<CR>
 
 nnoremap <Leader>rr :action RunClass<CR>
 nnoremap <Leader>ru :action RunClass<CR>
