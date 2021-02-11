@@ -28,12 +28,14 @@ This Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs]
     - [[#goto][Goto]]
     - [[#gradle][Gradle]]
     - [[#insertions][Insertions]]
-    - [[#misc--todo][Misc / Todo]]
+- [[#usefull-links][Usefull Links]]
+- [[#ideas--todos][Ideas / Todos]]
+  - [[#editorcompletestatement-s-spc][EditorCompleteStatement S-SPC]]
+  - [[#misc-1][Misc]]
     - [[#notifications][Notifications]]
     - [[#refactor][Refactor]]
     - [[#replace-hotkeysshortcuts][Replace hotkeys/shortcuts]]
     - [[#run][Run]]
-- [[#usefull-links][Usefull Links]]
 
 * Default
 ** Import Intellijmacs
@@ -218,7 +220,16 @@ nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 nnoremap <leader>is    :action InsertLiveTemplate<CR>a
 vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 #+end_src
-*** Misc / Todo
+* Usefull Links
+- [[https://github.com/JetBrains/ideavim#ideavim][IdeaVim]]
+- [[https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md#list-of-supported-set-commands][List of Supported Set Commands]]
+- [[https://github.com/JetBrains/ideavim/blob/master/src/com/maddyhome/idea/vim/package-info.java][List of Supported motions and operations]]
+- [[https://github.com/JetBrains/ideavim/blob/master/CHANGES.md#the-changelog][IdeaVim Changelog]]
+- [[https://github.com/MarcoIeni/intellimacs][Intellimacs]]
+
+* Ideas / Todos
+** EditorCompleteStatement S-SPC
+** Misc
 #+begin_src bash
 
 " ParameterInfo
@@ -335,9 +346,3 @@ nnoremap <Leader>rc :action RunCoverage<CR>
 nnoremap <leader>rk :action Stop<CR>
 nnoremap <leader>rs :action ChooseRunConfiguration<CR>
 #+end_src
-* Usefull Links
-- [[https://github.com/JetBrains/ideavim#ideavim][IdeaVim]]
-- [[https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md#list-of-supported-set-commands][List of Supported Set Commands]]
-- [[https://github.com/JetBrains/ideavim/blob/master/src/com/maddyhome/idea/vim/package-info.java][List of Supported motions and operations]]
-- [[https://github.com/JetBrains/ideavim/blob/master/CHANGES.md#the-changelog][IdeaVim Changelog]]
-- [[https://github.com/MarcoIeni/intellimacs][Intellimacs]]
