@@ -29,16 +29,16 @@ This Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs]
     - [[#goto][Goto]]
     - [[#gradle][Gradle]]
     - [[#insertions][Insertions]]
+    - [[#notifications][Notifications]]
+    - [[#refactor][Refactor]]
+    - [[#replace-hotkeysshortcuts][Replace hotkeys/shortcuts]]
+    - [[#run][Run]]
 - [[#usefull-links][Usefull Links]]
 - [[#ideas--todos][Ideas / Todos]]
   - [[#editorcompletestatement-instead-of-c-s-cr---s-spc][EditorCompleteStatement instead of C-S-CR -> S-SPC]]
   - [[#mark-line-_v---vv--recherchieren-ob-es-bereits-defaults-dafür-gibt--ggf-auch-in-doom][Mark Line. "_v$" -> "vv" . Recherchieren ob es bereits defaults dafür gibt . Ggf auch in doom..]]
   - [[#in-insert-c-v-for-paste-or-c-r-c-r-or-c-r-c-e][in insert: C-v for paste? or C-r C-r? or C-r C-e?]]
   - [[#misc-1][Misc]]
-    - [[#notifications][Notifications]]
-    - [[#refactor][Refactor]]
-    - [[#replace-hotkeysshortcuts][Replace hotkeys/shortcuts]]
-    - [[#run][Run]]
 
 * Create symlink
 
@@ -234,6 +234,62 @@ nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 nnoremap <leader>is    :action InsertLiveTemplate<CR>a
 vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 #+end_src
+*** Notifications
+#+begin_src bash
+nnoremap <leader>nc    :action CloseAllNotifications<CR>
+#+end_src
+*** Refactor
+#+begin_src bash
+"noremap <Leader>in :action Inline<CR>
+nnoremap <leader>mrin    :action Inline<CR>
+vnoremap <leader>mrin    <Esc>:action Inline<CR>
+
+"noremap <Leader>ev :action IntroduceVariable<CR>
+nnoremap <leader>mrev    :action IntroduceVariable<CR>
+vnoremap <leader>mrev    <Esc>:action IntroduceVariable<CR>
+
+"noremap <Leader>ep :action IntroduceParameter<CR>
+nnoremap <leader>mrep    :action IntroduceParameter<CR>
+vnoremap <leader>mrep    <Esc>:action IntroduceParameter<CR>
+
+"noremap <Leader>ec :action IntroduceConstant<CR>
+nnoremap <leader>mrec    :action IntroduceConstant<CR>
+vnoremap <leader>mrec    <Esc>:action IntroduceConstant<CR>
+
+"noremap <Leader>ef :action IntroduceField<CR>
+nnoremap <leader>mref    :action IntroduceField<CR>
+vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
+
+"noremap <Leader>em :action ExtractMethod<CR>
+#+end_src
+*** Replace hotkeys/shortcuts
+#+begin_src bash
+nnoremap <C-,> :action ShowSettings<CR>
+
+nnoremap <C-j> :action MethodDown<CR>
+nnoremap <C-k> :action MethodUp<CR>
+nnoremap <A-j> :action MoveLineDown<CR>
+nnoremap <A-k> :action MoveLineUp<CR>
+
+nnoremap <A-S-j> :action MoveStatementDown<CR>
+nnoremap <A-S-k> :action MoveStatementUp<CR>
+
+nnoremap <A-h> :action MoveElementLeft<CR>
+nnoremap <A-l> :action MoveElementRight<CR>
+
+" Not working :-(
+"nnoremap <C-n> :action NextDiff<CR>
+"nnoremap <C-p> :action PreviousDiff<CR>
+#+end_src
+*** Run
+#+begin_src bash
+nnoremap <Leader>rr :action RunClass<CR>
+nnoremap <Leader>ru :action RunClass<CR>
+nnoremap <Leader>rl :action Rerun<CR>
+nnoremap <Leader>rc :action RunCoverage<CR>
+nnoremap <leader>rk :action Stop<CR>
+nnoremap <leader>rs :action ChooseRunConfiguration<CR>
+#+end_src
 * Usefull Links
 - [[https://github.com/JetBrains/ideavim#ideavim][IdeaVim]]
 - [[https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md#list-of-supported-set-commands][List of Supported Set Commands]]
@@ -305,60 +361,4 @@ vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 "vnoremap aa :action GuiDesigner.ExpandSelection<CR>
 "vnoremap ab :action SmartSelect<CR>
 "vnoremap ac :action TableResult.GrowSelection<CR>
-#+end_src
-*** Notifications
-#+begin_src bash
-nnoremap <leader>nc    :action CloseAllNotifications<CR>
-#+end_src
-*** Refactor
-#+begin_src bash
-"noremap <Leader>in :action Inline<CR>
-nnoremap <leader>mrin    :action Inline<CR>
-vnoremap <leader>mrin    <Esc>:action Inline<CR>
-
-"noremap <Leader>ev :action IntroduceVariable<CR>
-nnoremap <leader>mrev    :action IntroduceVariable<CR>
-vnoremap <leader>mrev    <Esc>:action IntroduceVariable<CR>
-
-"noremap <Leader>ep :action IntroduceParameter<CR>
-nnoremap <leader>mrep    :action IntroduceParameter<CR>
-vnoremap <leader>mrep    <Esc>:action IntroduceParameter<CR>
-
-"noremap <Leader>ec :action IntroduceConstant<CR>
-nnoremap <leader>mrec    :action IntroduceConstant<CR>
-vnoremap <leader>mrec    <Esc>:action IntroduceConstant<CR>
-
-"noremap <Leader>ef :action IntroduceField<CR>
-nnoremap <leader>mref    :action IntroduceField<CR>
-vnoremap <leader>mref    <Esc>:action IntroduceField<CR>
-
-"noremap <Leader>em :action ExtractMethod<CR>
-#+end_src
-*** Replace hotkeys/shortcuts
-#+begin_src bash
-nnoremap <C-,> :action ShowSettings<CR>
-
-nnoremap <C-j> :action MethodDown<CR>
-nnoremap <C-k> :action MethodUp<CR>
-nnoremap <A-j> :action MoveLineDown<CR>
-nnoremap <A-k> :action MoveLineUp<CR>
-
-nnoremap <A-S-j> :action MoveStatementDown<CR>
-nnoremap <A-S-k> :action MoveStatementUp<CR>
-
-nnoremap <A-h> :action MoveElementLeft<CR>
-nnoremap <A-l> :action MoveElementRight<CR>
-
-" Not working :-(
-"nnoremap <C-n> :action NextDiff<CR>
-"nnoremap <C-p> :action PreviousDiff<CR>
-#+end_src
-*** Run
-#+begin_src bash
-nnoremap <Leader>rr :action RunClass<CR>
-nnoremap <Leader>ru :action RunClass<CR>
-nnoremap <Leader>rl :action Rerun<CR>
-nnoremap <Leader>rc :action RunCoverage<CR>
-nnoremap <leader>rk :action Stop<CR>
-nnoremap <leader>rs :action ChooseRunConfiguration<CR>
 #+end_src
