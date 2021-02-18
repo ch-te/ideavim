@@ -1,3 +1,7 @@
+# mv ~/.ideavimrc ~/archive/
+  # or rm ~/.ideavimrc
+ln -s ~/projects/ideavim/.ideavimrc ~/.ideavimrc
+
 source ~/.intellimacs/spacemacs.vim
 source ~/.intellimacs/extra.vim
 source ~/.intellimacs/major.vim
@@ -34,6 +38,7 @@ set surround
 set commentary
 set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
+set NERDTree
 
 set textobj-entire
 set argtextobj
@@ -93,7 +98,7 @@ nnoremap <leader>gl :action Vcs.Show.Log<CR>
 unmap <leader>gs
 nnoremap <leader>gss :action Git.Stash<CR>
 nnoremap <leader>gsu :action Git.Unstash<CR>
-nnoremap <leader>gr :action Git.Unstash<CR>
+nnoremap <leader>gr :action Vcs.RollbackChangedLines<CR>
 
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
