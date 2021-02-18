@@ -37,6 +37,16 @@ This Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs]
     - [[#replace-hotkeysshortcuts][Replace hotkeys/shortcuts]]
     - [[#run][Run]]
 
+* Create symlink
+
+This depends where your .ideavimrc file is generated.
+You could tangle this output also to ~/.ideavimrc instead of .ideavimrc. Then a symlink isn't needed.
+
+#+begin_src bash
+# mv ~/.ideavimrc ~/archive/
+  # or rm ~/.ideavimrc
+ln -s ~/projects/ideavim/.ideavimrc ~/.ideavimrc
+#+end_src
 * Default
 ** Import Intellijmacs
 First, so it can be overwritten
