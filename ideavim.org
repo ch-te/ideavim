@@ -208,6 +208,7 @@ nnoremap <leader>gf :action Git.Fetch<CR>
 nnoremap <leader>gF :action Vcs.UpdateProject<CR>
 nnoremap <leader>ga :action Annotate<CR>
 nnoremap <leader>gl :action Vcs.Show.Log<CR>
+nnoremap <leader>gf :action Vcs.ShowTabbedFileHistory<CR>
 unmap <leader>gs
 nnoremap <leader>gss :action Git.Stash<CR>
 nnoremap <leader>gsu :action Git.Unstash<CR>
