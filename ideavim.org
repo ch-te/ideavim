@@ -5,7 +5,6 @@ The configuration is saved in the dotfile .ideavimrc.
 This Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs][Intellimacs]], which base on the [[https://github.com/syl20bnr/spacemacs][Spacemacs]]. My own Keybindings are inspired by [[https://github.com/hlissner/doom-emacs#doom-emacs][Doom Emacs]]
 
 * Table of Contents :TOC_3:noexport:
-- [[#create-symlink][Create symlink]]
 - [[#default][Default]]
   - [[#import-intellijmacs][Import Intellijmacs]]
   - [[#settings][Settings]]
@@ -40,16 +39,6 @@ This Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs]
   - [[#in-insert-c-v-for-paste-or-c-r-c-r-or-c-r-c-e][in insert: C-v for paste? or C-r C-r? or C-r C-e?]]
   - [[#misc-1][Misc]]
 
-* Create symlink
-
-This depends where your .ideavimrc file is generated.
-You could tangle this output also to ~/.ideavimrc instead of .ideavimrc. Then a symlink isn't needed.
-
-#+begin_src bash
-# mv ~/.ideavimrc ~/archive/
-  # or rm ~/.ideavimrc
-ln -s ~/projects/ideavim/.ideavimrc ~/.ideavimrc
-#+end_src
 * Default
 ** Import Intellijmacs
 First, so it can be overwritten
