@@ -35,7 +35,7 @@ set commentary
 set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 set NERDTree
-set vim-indent-object
+set textobj-indent "set vim-indent-object is not working
 
 set textobj-entire
 set argtextobj

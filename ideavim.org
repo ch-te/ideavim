@@ -83,6 +83,7 @@ vnoremap sr y:%s///gcI<left><left><left><left><left><C-r>0<right>
 vnoremap ss y/<C-r>0<CR>
 #+end_src
 * Plugins
+Sometimes the plugins doesn't load. Then you should use their name and not alias, which you find here: VimExtensions.xml -> https://github.com/JetBrains/ideavim/blob/master/resources/META-INF/includes/VimExtensions.xml
 ** Load
 #+begin_src bash
 set surround
@@ -90,7 +91,7 @@ set commentary
 set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 set NERDTree
-set vim-indent-object
+set textobj-indent "set vim-indent-object is not working
 #+end_src
 ** Settings
 #+begin_src bash
