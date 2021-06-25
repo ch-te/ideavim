@@ -50,14 +50,6 @@ set ideajoin
 set idearefactormode=keep
 set clipboard+=ideaput
 
-nnoremap <Leader>mm :action MainMenu<CR>
-
-nnoremap <leader>* viw:action FindInPath<CR>
-
-nnoremap <leader>hrr    :source ~/.ideavimrc<CR>
-
-nnoremap <leader>jd :action SelectInProjectView<CR>
-
 nnoremap <leader><enter> :action ShowBookmarks<CR>
 nnoremap <leader>bm :action ToggleBookmark<CR>
 
@@ -112,6 +104,14 @@ nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 nnoremap <leader>is    :action InsertLiveTemplate<CR>a
 vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 
+nnoremap <Leader>mm :action MainMenu<CR>
+
+nnoremap <leader>* viw:action FindInPath<CR>
+
+nnoremap <leader>hrr    :source ~/.ideavimrc<CR>
+
+nnoremap <leader>jd :action SelectInProjectView<CR>
+
 nnoremap <leader>nc    :action CloseAllNotifications<CR>
 
 "noremap <Leader>in :action Inline<CR>
@@ -152,6 +152,8 @@ nnoremap <A-l> :action MoveElementRight<CR>
 " Not working :-(
 "nnoremap <C-n> :action NextDiff<CR>
 "nnoremap <C-p> :action PreviousDiff<CR>
+"Complete current Statement
+"nnoremap <S- > :action EditorCompleteStatement<CR>
 
 nnoremap <Leader>rr :action RunClass<CR>
 nnoremap <Leader>ru :action RunClass<CR>
