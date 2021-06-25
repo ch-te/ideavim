@@ -36,12 +36,13 @@ set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 set NERDTree
 set textobj-indent "set vim-indent-object is not working
-
 set textobj-entire
 set argtextobj
 set ReplaceWithRegister
 set highlightedyank
 set exchange
+
+
 
 nmap s <Plug>(easymotion-s2)
 nmap S <Plug>(easymotion-sl2)

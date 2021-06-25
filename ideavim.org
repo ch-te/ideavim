@@ -13,10 +13,10 @@ Those Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs
     - [[#misc][Misc]]
 - [[#plugins][Plugins]]
   - [[#load][Load]]
-  - [[#settings-1][Settings]]
+  - [[#settings-empty][Settings (empty)]]
   - [[#keymappings-1][Keymappings]]
 - [[#ideavim][IdeaVim]]
-  - [[#settings-2][Settings]]
+  - [[#settings-1][Settings]]
   - [[#keymappings-2][Keymappings]]
     - [[#bookmark][Bookmark]]
     - [[#buffer][Buffer]]
@@ -92,14 +92,14 @@ set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
 set NERDTree
 set textobj-indent "set vim-indent-object is not working
-#+end_src
-** Settings
-#+begin_src bash
 set textobj-entire
 set argtextobj
 set ReplaceWithRegister
 set highlightedyank
 set exchange
+#+end_src
+** Settings (empty)
+#+begin_src bash
 #+end_src
 ** Keymappings
 #+begin_src bash
