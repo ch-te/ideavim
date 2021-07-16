@@ -196,6 +196,7 @@ nnoremap g-    <C-x>
 *** Gradle
 #+begin_src bash
 nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
+nnoremap <Leader>Gr :action ExternalSystem.ProjectRefreshAction<CR>
 #+end_src
 *** Insertions
 #+begin_src bash
