@@ -104,6 +104,8 @@ nnoremap g-    <C-x>
 nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 nnoremap <Leader>Gr :action ExternalSystem.ProjectRefreshAction<CR>
 
+nnoremap <Leader>hc :action CallHierarchy<CR>
+
 nnoremap <leader>is    :action InsertLiveTemplate<CR>a
 vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 

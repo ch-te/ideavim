@@ -27,6 +27,7 @@ Those Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs
     - [[#gitversions-control][Git/Versions control]]
     - [[#goto][Goto]]
     - [[#gradle][Gradle]]
+    - [[#help-and-hierarchy][Help and Hierarchy]]
     - [[#insertions][Insertions]]
     - [[#misc-unsorted][Misc (Unsorted)]]
     - [[#notifications][Notifications]]
@@ -198,6 +199,10 @@ nnoremap g-    <C-x>
 #+begin_src bash
 nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 nnoremap <Leader>Gr :action ExternalSystem.ProjectRefreshAction<CR>
+#+end_src
+*** Help and Hierarchy
+#+begin_src bash
+nnoremap <Leader>hc :action CallHierarchy<CR>
 #+end_src
 *** Insertions
 #+begin_src bash
