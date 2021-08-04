@@ -136,6 +136,8 @@ nnoremap <leader>bs :action NewScratchFile<CR>
 vnoremap <leader>bs :action NewScratchFile<CR>
 nnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
 vnoremap <leader>bc :action Scratch.ChangeLanguage<CR>
+
+nnoremap <leader>bl    <C-S-6>
 #+end_src
 *** Code
 
