@@ -78,6 +78,7 @@ nnoremap <leader>mdl    :action Debug<CR>
 
 nnoremap <leader><leader> :action GotoFile<CR>
 nnoremap <leader>fo :action OpenFile<CR>
+nnoremap <leader>fC :action CopyElement<CR>
 
 nnoremap <Leader>gg :action ActivateCommitToolWindow<CR>
 nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>

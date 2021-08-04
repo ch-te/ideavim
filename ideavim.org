@@ -168,6 +168,7 @@ nnoremap <leader>mdl    :action Debug<CR>
 #+begin_src bash
 nnoremap <leader><leader> :action GotoFile<CR>
 nnoremap <leader>fo :action OpenFile<CR>
+nnoremap <leader>fC :action CopyElement<CR>
 #+end_src
 *** Git/Versions control
 #+begin_src bash
