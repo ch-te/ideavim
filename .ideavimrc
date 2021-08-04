@@ -112,8 +112,6 @@ vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
 
 nnoremap <Leader>mm :action MainMenu<CR>
 
-nnoremap <leader>* viw:action FindInPath<CR>
-
 nnoremap <leader>hrr    :source ~/.ideavimrc<CR>
 
 nnoremap <leader>jd :action SelectInProjectView<CR>
@@ -167,6 +165,10 @@ nnoremap <Leader>rl :action Rerun<CR>
 nnoremap <Leader>rc :action RunCoverage<CR>
 nnoremap <leader>rk :action Stop<CR>
 nnoremap <leader>rs :action ChooseRunConfiguration<CR>
+
+nnoremap <leader>* viw:action FindInPath<CR>
+
+nnoremap <leader>/    :action FindInPath<CR>
 
 nnoremap <Leader>wm <C-W>o:action HideActiveWindow<CR>
 
