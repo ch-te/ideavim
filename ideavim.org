@@ -127,8 +127,6 @@ nnoremap <leader>bm :action ToggleBookmark<CR>
 Show recent Files | "Switch Workspace Buffer"
 
 #+begin_src bash
-nnoremap <Leader><Leader> :action RecentFiles<CR>
-vnoremap <Leader><Leader> :action RecentFiles<CR>
 nnoremap <Leader>, :action RecentFiles<CR>
 vnoremap <Leader>, :action RecentFiles<CR>
 #+end_src
@@ -166,8 +164,8 @@ nnoremap <leader>mdl    :action Debug<CR>
 #+end_src
 *** File
 #+begin_src bash
+nnoremap <leader><leader> :action GotoFile<CR>
 nnoremap <leader>fo :action OpenFile<CR>
-vnoremap <leader>fo :action OpenFile<CR>
 #+end_src
 *** Git/Versions control
 #+begin_src bash
