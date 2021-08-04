@@ -102,6 +102,7 @@ nnoremap g=    <C-a>
 nnoremap g-    <C-x>
 
 nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
+nnoremap <Leader>Gr :action ExternalSystem.ProjectRefreshAction<CR>
 
 nnoremap <leader>is    :action InsertLiveTemplate<CR>a
 vnoremap <leader>is    <esc>:action insertlivetemplate<cr>a
@@ -163,6 +164,8 @@ nnoremap <Leader>rl :action Rerun<CR>
 nnoremap <Leader>rc :action RunCoverage<CR>
 nnoremap <leader>rk :action Stop<CR>
 nnoremap <leader>rs :action ChooseRunConfiguration<CR>
+
+nnoremap <Leader>wm <C-W>o:action HideActiveWindow<CR>
 
 " ParameterInfo
 
