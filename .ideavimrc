@@ -170,7 +170,7 @@ nnoremap <leader>* viw:action FindInPath<CR>
 
 nnoremap <leader>/    :action FindInPath<CR>
 
-nnoremap <Leader>wm <C-W>o:action HideActiveWindow<CR>
+nnoremap <Leader>wm <C-W>o:action HideAllWindows<CR>
 
 " ParameterInfo
 

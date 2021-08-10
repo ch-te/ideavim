@@ -299,7 +299,7 @@ nnoremap <leader>/    :action FindInPath<CR>
 #+end_src
 *** Window
 #+begin_src bash
-nnoremap <Leader>wm <C-W>o:action HideActiveWindow<CR>
+nnoremap <Leader>wm <C-W>o:action HideAllWindows<CR>
 #+end_src
 * Usefull Links
 - [[https://github.com/JetBrains/ideavim#ideavim][IdeaVim]]
