@@ -76,6 +76,9 @@ nnoremap <leader>mdi    :action StepInto<CR>
 nnoremap <leader>mdd    :action DebugClass<CR>
 nnoremap <leader>mdl    :action Debug<CR>
 
+nnoremap ]e :action GotoNextError<CR>
+nnoremap [e :action GotoPreviousError<CR>
+
 nnoremap <leader><leader> :action GotoFile<CR>
 nnoremap <leader>fo :action OpenFile<CR>
 nnoremap <leader>fC :action CopyElement<CR>
@@ -94,11 +97,12 @@ nnoremap <leader>gr :action Vcs.RollbackChangedLines<CR>
 
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
-nnoremap <Leader>mgs :action GotoSuperMethod<CR>
-nnoremap gt :action GotoTest<CR>
-vnoremap gt :action GotoTest<CR>
+nnoremap gtt :action GotoTest<CR>
+vnoremap gtt :action GotoTest<CR>
 nnoremap gD :action FindUsages<CR>
 vnoremap gD :action FindUsages<CR>
+nnoremap gtd :action GotoTypeDeclaration<CR>
+vnoremap gtd :action GotoTypeDeclaration<CR>
 nnoremap g=    <C-a>
 nnoremap g-    <C-x>
 
