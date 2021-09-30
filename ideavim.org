@@ -155,6 +155,12 @@ Optimize/Organize Imports
 nnoremap <leader>co :action OptimizeImports<CR>
 #+end_src
 
+Format Buffer/Region & Optimize/Organize Imports & Silent Code Cleanup
+
+#+begin_src bash
+nnoremap <leader>cc :action SilentCodeCleanup<CR>:action ReformatCode<CR>:action OptimizeImports<CR>
+#+end_src
+
 *** Database
 #+begin_src bash
 nnoremap <Leader>dd :action ActivateDatabaseToolWindow<CR>

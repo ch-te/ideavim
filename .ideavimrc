@@ -69,6 +69,8 @@ nnoremap <leader>cf :action ReformatCode<CR>
 
 nnoremap <leader>co :action OptimizeImports<CR>
 
+nnoremap <leader>cc :action SilentCodeCleanup<CR>:action ReformatCode<CR>:action OptimizeImports<CR>
+
 nnoremap <Leader>dd :action ActivateDatabaseToolWindow<CR>
 
 nnoremap <leader>mds    :action ChooseDebugConfiguration<CR>
