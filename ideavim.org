@@ -116,7 +116,7 @@ nmap S <Plug>(easymotion-sl2)
 #+begin_src bash
 set ideajoin
 set idearefactormode=keep
-set clipboard+=ideaput
+" set clipboard+=ideaput
 #+end_src
 ** Keymappings
 *** Bookmark

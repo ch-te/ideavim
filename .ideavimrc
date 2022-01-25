@@ -50,7 +50,7 @@ nmap S <Plug>(easymotion-sl2)
 
 set ideajoin
 set idearefactormode=keep
-set clipboard+=ideaput
+" set clipboard+=ideaput
 
 nnoremap <leader><enter> :action ShowBookmarks<CR>
 nnoremap <leader>bm :action ToggleBookmark<CR>
