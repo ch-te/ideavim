@@ -36,6 +36,7 @@ Those Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs
     - [[#replace-hotkeysshortcuts][Replace hotkeys/shortcuts]]
     - [[#run][Run]]
     - [[#search][Search]]
+    - [[#terminal][Terminal]]
     - [[#window][Window]]
 - [[#usefull-links][Usefull Links]]
 - [[#ideas--todos][Ideas / Todos]]
@@ -309,6 +310,11 @@ nnoremap <leader>* viw:action FindInPath<CR>
 
 #+begin_src bash
 nnoremap <leader>/    :action FindInPath<CR>
+#+end_src
+*** Terminal
+#+begin_src bash
+nnoremap <leader>ot    :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>oe    :action ActivateTerminalToolWindow<CR>
 #+end_src
 *** Window
 #+begin_src bash
