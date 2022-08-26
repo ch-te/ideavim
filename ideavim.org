@@ -210,6 +210,8 @@ nnoremap gtd :action GotoTypeDeclaration<CR>
 vnoremap gtd :action GotoTypeDeclaration<CR>
 nnoremap g=    <C-a>
 nnoremap g-    <C-x>
+# Goto "Header"
+map gh gg<Action>(MethodDown)z<CR>5<C-y>
 #+end_src
 *** Gradle
 #+begin_src bash
