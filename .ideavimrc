@@ -41,6 +41,7 @@ set argtextobj
 set ReplaceWithRegister
 set highlightedyank
 set exchange
+set matchit
 
 
 
@@ -87,15 +88,16 @@ nnoremap <leader>fC :action CopyElement<CR>
 
 nnoremap <Leader>gg :action ActivateCommitToolWindow<CR>
 nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
-nnoremap <leader>gf :action Git.Fetch<CR>
 nnoremap <leader>gF :action Vcs.UpdateProject<CR>
 nnoremap <leader>ga :action Annotate<CR>
 nnoremap <leader>gl :action Vcs.Show.Log<CR>
-nnoremap <leader>gf :action Vcs.ShowTabbedFileHistory<CR>
 unmap <leader>gs
 nnoremap <leader>gss :action Git.Stash<CR>
 nnoremap <leader>gsu :action Git.Unstash<CR>
 nnoremap <leader>gr :action Vcs.RollbackChangedLines<CR>
+;unmap <leader>gf
+;nnoremap <leader>gf :action Git.Fetch<CR>
+;nnoremap <leader>gf :action Vcs.ShowTabbedFileHistory<CR>
 
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
@@ -107,6 +109,8 @@ nnoremap gtd :action GotoTypeDeclaration<CR>
 vnoremap gtd :action GotoTypeDeclaration<CR>
 nnoremap g=    <C-a>
 nnoremap g-    <C-x>
+# Goto "Header"
+map gh gg<Action>(MethodDown)z<CR>5<C-y>
 
 nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 nnoremap <Leader>Gr :action ExternalSystem.ProjectRefreshAction<CR>
@@ -175,6 +179,9 @@ nnoremap <leader>rs :action ChooseRunConfiguration<CR>
 nnoremap <leader>* viw:action FindInPath<CR>
 
 nnoremap <leader>/    :action FindInPath<CR>
+
+nnoremap <leader>ot    :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>oe    :action ActivateTerminalToolWindow<CR>
 
 nnoremap <Leader>wm <C-W>o:action HideAllWindows<CR>
 

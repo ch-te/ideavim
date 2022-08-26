@@ -40,7 +40,8 @@ Those Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs
     - [[#window][Window]]
 - [[#usefull-links][Usefull Links]]
 - [[#ideas--todos][Ideas / Todos]]
-  - [[#mark-line-_v---vv--recherchieren-ob-es-bereits-defaults-dafür-gibt--ggf-auch-in-doom][Mark Line. "_v$" -> "vv" . Recherchieren ob es bereits defaults dafür gibt . Ggf auch in doom..]]
+  - [[#open-magit-with-leadergg][Open Magit with <leader>gg]]
+  - [[#mark-line-_v---vv--recherchieren-ob-es-bereits-defaults-dafür-gibt--ggf-auch-in-doom][Mark Line. "_v$" -> "vv" . Recherchieren ob es bereits defaults dafür gibt . Ggf auch in doom.]]
   - [[#in-insert-c-v-for-paste-or-c-r-c-r-or-c-r-c-e][in insert: C-v for paste? or C-r C-r? or C-r C-e?]]
   - [[#misc-1][Misc]]
 
@@ -102,6 +103,7 @@ set argtextobj
 set ReplaceWithRegister
 set highlightedyank
 set exchange
+set matchit
 #+end_src
 ** Settings (empty)
 #+begin_src bash
@@ -188,15 +190,16 @@ nnoremap <leader>fC :action CopyElement<CR>
 #+begin_src bash
 nnoremap <Leader>gg :action ActivateCommitToolWindow<CR>
 nnoremap <leader>go :action Vcs.QuickListPopupAction<CR>
-nnoremap <leader>gf :action Git.Fetch<CR>
 nnoremap <leader>gF :action Vcs.UpdateProject<CR>
 nnoremap <leader>ga :action Annotate<CR>
 nnoremap <leader>gl :action Vcs.Show.Log<CR>
-nnoremap <leader>gf :action Vcs.ShowTabbedFileHistory<CR>
 unmap <leader>gs
 nnoremap <leader>gss :action Git.Stash<CR>
 nnoremap <leader>gsu :action Git.Unstash<CR>
 nnoremap <leader>gr :action Vcs.RollbackChangedLines<CR>
+;unmap <leader>gf
+;nnoremap <leader>gf :action Git.Fetch<CR>
+;nnoremap <leader>gf :action Vcs.ShowTabbedFileHistory<CR>
 #+end_src
 *** Goto
 #+begin_src bash
@@ -329,7 +332,12 @@ nnoremap <Leader>wm <C-W>o:action HideAllWindows<CR>
 - [[https://github.com/JetBrains/ideavim/blob/master/CHANGES.md#the-changelog][IdeaVim Changelog]]
 - [[https://github.com/MarcoIeni/intellimacs][Intellimacs]]
 * Ideas / Todos
-** [#B] Mark Line. "_v$" -> "vv" . Recherchieren ob es bereits defaults dafür gibt . Ggf auch in doom..
+** [#A] Open Magit with <leader>gg
+#+begin_src
+emacsclient -t -e "(call-interactively #'magit-checkout)" -e "(delete-frame)"
+emacsclient -t -e "(call-interactively #'magit-status)" -e "(delete-frame)"
+#+end_src
+** [#C] Mark Line. "_v$" -> "vv" . Recherchieren ob es bereits defaults dafür gibt . Ggf auch in doom.
 ** [#C] in insert: C-v for paste? or C-r C-r? or C-r C-e?
 ** Misc
 #+begin_src bash
