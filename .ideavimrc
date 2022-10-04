@@ -34,7 +34,7 @@ set surround
 set commentary
 set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
-set NERDTree
+set NERDTree " help -> https://github.com/JetBrains/ideavim/wiki/NERDTree-support
 set textobj-indent "set vim-indent-object is not working
 set textobj-entire
 set argtextobj
