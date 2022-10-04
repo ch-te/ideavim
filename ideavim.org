@@ -97,7 +97,23 @@ set surround
 set commentary
 set easymotion
 set multiple-cursors "<A-n>, <A-x>, <A-p>, g<A-n>
-set NERDTree " help -> https://github.com/JetBrains/ideavim/wiki/NERDTree-support
+#+end_src
+
+NerdTree
+help -> https://github.com/JetBrains/ideavim/wiki/NERDTree-support
+usefull:
+ i -> split
+ s -> split
+ p -> jump to root node
+ J,K -> first last entry
+ m -> show menu
+ A -> Zoom
+
+#+begin_src bash
+set NERDTree
+#+end_src
+
+#+begin_src bash
 set textobj-indent "set vim-indent-object is not working
 set textobj-entire
 set argtextobj
