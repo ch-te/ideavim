@@ -112,7 +112,7 @@ vnoremap gtd :action GotoTypeDeclaration<CR>
 nnoremap g=    <C-a>
 nnoremap g-    <C-x>
 # Goto "Header"
-map gh gg<Action>(MethodDown)z<CR>5<C-y>
+map gh gg<Action>(MethodDown)mxz<CR>5<C-y>`x
 
 nnoremap <Leader>Gg :action ActivateGradleToolWindow<CR>
 nnoremap <Leader>Gr :action ExternalSystem.ProjectRefreshAction<CR>
