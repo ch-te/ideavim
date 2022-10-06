@@ -4,6 +4,11 @@
 The configuration is saved in the dotfile .ideavimrc.
 Those Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs][Intellimacs]], which base on the [[https://github.com/syl20bnr/spacemacs][Spacemacs]]. My own Keybindings are inspired by [[https://github.com/hlissner/doom-emacs#doom-emacs][Doom Emacs]]
 
+Search "Action Ids" via:
+ - :actionlist name
+ - or: "ideaVim: Track action Ids"
+
+
 * Table of Contents :TOC_3:noexport:
 - [[#default][Default]]
   - [[#import-intellijmacs][Import Intellijmacs]]
@@ -36,6 +41,7 @@ Those Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs
     - [[#replace-hotkeysshortcuts][Replace hotkeys/shortcuts]]
     - [[#run][Run]]
     - [[#search][Search]]
+    - [[#toggle][Toggle]]
     - [[#terminal][Terminal]]
     - [[#window][Window]]
 - [[#usefull-links][Usefull Links]]
@@ -202,6 +208,8 @@ nnoremap [e :action GotoPreviousError<CR>
 nnoremap <leader><leader> :action GotoFile<CR>
 nnoremap <leader>fo :action OpenFile<CR>
 nnoremap <leader>fC :action CopyElement<CR>
+nnoremap <leader>fyy :action CopyFileName<CR>
+nnoremap <leader>fyp :action CopyPathFromRepositoryRootProvider<CR>
 #+end_src
 *** Git/Versions control
 #+begin_src bash
@@ -332,6 +340,10 @@ nnoremap <leader>* viw:action FindInPath<CR>
 
 #+begin_src bash
 nnoremap <leader>/    :action FindInPath<CR>
+#+end_src
+*** Toggle
+#+begin_src bash
+nnoremap <leader>tl :action EditorGutterToggleGlobalLineNumbers<CR>
 #+end_src
 *** Terminal
 #+begin_src bash
