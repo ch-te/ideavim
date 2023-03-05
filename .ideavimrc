@@ -130,6 +130,8 @@ nnoremap <leader>hrr    :source ~/.ideavimrc<CR>
 
 nnoremap <leader>jd :action SelectInProjectView<CR>
 
+inoremap <C-y> :action EditorPaste<CR>
+
 nnoremap <leader>nc    :action CloseAllNotifications<CR>
 
 "noremap <Leader>in :action Inline<CR>

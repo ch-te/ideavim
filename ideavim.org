@@ -273,6 +273,13 @@ Select current File in Project View
 #+begin_src bash
 nnoremap <leader>jd :action SelectInProjectView<CR>
 #+end_src
+
+Paste in insert mode
+
+#+begin_src bash
+inoremap <C-y> :action EditorPaste<CR>
+
+#+end_src
 *** Notifications
 #+begin_src bash
 nnoremap <leader>nc    :action CloseAllNotifications<CR>
