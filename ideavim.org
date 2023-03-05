@@ -6,7 +6,7 @@ Those Keybindings base on [[https://github.com/MarcoIeni/intellimacs#intellimacs
 
 Search "Action Ids" via:
  - :actionlist name
- - or: "ideaVim: Track action Ids"
+ - or action: "ideaVim: Track action Ids"
 
 
 * Table of Contents :TOC_3:noexport:
